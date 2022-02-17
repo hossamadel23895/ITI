@@ -1,0 +1,17 @@
+.rectangle {
+    -fx-fill: linear-gradient(black 0%, white 50%, black 100%);
+}
+.text {
+    -fx-font-size: 25;
+    -fx-translate-y: -30;
+	-fx-font-weight: bold;
+    -fx-fill: Blue;
+}
+.reflectedText {
+    -fx-fill: linear-gradient(transparent 20%, red 100%);
+    -fx-font-size: 25;
+    -fx-translate-y: 30;
+	-fx-font-weight: bold;
+    -fx-scale-y: -1;
+    -fx-opacity: 0.8;
+}

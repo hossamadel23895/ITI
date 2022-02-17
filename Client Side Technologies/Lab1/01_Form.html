@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title> Form Example </title>
+    </head>
+
+    <body>
+
+        <div
+        style=  "display: flex;
+        height: 600px;
+        width: 1000px;
+        background-color: rgb(245,249,248);
+        flex-direction: column;
+        border: 2px rgb(188,207,199) solid;
+        font-family: Arial, Helvetica, sans-serif;
+        ">
+
+            <h1 
+                style=  "display: flex;
+                        margin: 10px 10px;
+                        color:rgb(107,136,126);
+                        font-size: 30px;
+                        ">
+            Register - Create Account
+            </h1>
+
+            <p
+            style=  "display: flex;
+                    margin: 10px 10px;
+                    font-size: 18px;
+                    background-color: rgb(226,239,232);
+                    border: 2px rgb(188,207,199) dashed;
+            ">
+            Field marked with <span style="color:red"> * </span> are compulsory fields</p>
+
+            <form
+                action="test.html"
+                method="post"
+                style="display: flex;
+                flex-direction: column;
+            ">
+                <div
+                    style="display: flex;
+                    gap: 20px;
+                    align-items: center;
+                    height:35px;
+                    "
+                >
+                
+                    <p
+                        style="display: inline-flex;
+                        margin: 0px;
+                        padding: 0px 10px;
+                        justify-content: flex-end;
+                        background-color: rgb(224,239,232);
+                        color:rgb(131,150,141);
+                        width: 300px;
+                        height: 30px;
+                        align-items: center;"
+                    >
+
+                        <span style="color:red">*</span>
+
+                        Your Name
+                    </p>
+
+                    <input
+                    type="text" required
+                    style=  "display: flex;
+                            margin: 0px;
+                            width: 400px;
+                            height: 20px;
+                            "
+                    >
+
+                </div>
+
+                <div
+                    style="display: flex;
+                    gap: 20px;
+                    align-items: center;
+                    height:35px;
+                    "
+                >
+                
+                    <p
+                        style="display: inline-flex;
+                        margin: 0px;
+                        padding: 0px 10px;
+                        justify-content: flex-end;
+                        background-color: rgb(224,239,232);
+                        color:rgb(131,150,141);
+                        width: 300px;
+                        height: 30px;
+                        align-items: center;"
+                    >
+
+                        <span style="color:red">*</span>
+
+                        E-Mail ID
+                    </p>
+
+                    <input
+                    type="email" required
+                    style=  "display: flex;
+                            margin: 0px;
+                            width: 600px;
+                            height: 20px;
+                            "
+                    >
+
+                </div>
+
+                <div
+                    style="display: flex;
+                    gap: 20px;
+                    align-items: center;
+                    height:35px;
+                    "
+                >
+                
+                    <p
+                        style="display: inline-flex;
+                        margin: 0px;
+                        padding: 0px 10px;
+                        justify-content: flex-end;
+                        background-color: rgb(224,239,232);
+                        color:rgb(131,150,141);
+                        width: 300px;
+                        height: 30px;
+                        align-items: center;"
+                    >
+                        Alternate E-Mail ID
+                    </p>
+
+                    <input
+                    type="email"
+                    style=  "display: flex;
+                            margin: 0px;
+                            width: 600px;
+                            height: 20px;
+                            "
+                    >
+
+                </div>
+
+                <div
+                    style="display: flex;
+                    gap: 20px;
+                    align-items: center;
+                    height:60px;
+                    "
+                >
+                
+                    <p
+                        style="display: inline-flex;
+                        margin: 0px;
+                        padding: 0px 10px;
+                        justify-content: flex-end;
+                        background-color: rgb(224,239,232);
+                        color:rgb(131,150,141);
+                        width: 300px;
+                        height: 55px;
+                        align-items: center;"
+                    >
+                        Your Phone
+                    </p>
+
+                    <div
+                    style=  "display: flex;
+                            margin: 0px;
+                            width: 600px;
+                            height: 55px;
+                            justify-content: flex-start;
+                            gap: 10px;
+                            align-items: center;
+                            "
+                    >
+                        <div
+                        style=  "display: flex;
+                        margin: 0px;
+                        height: 40px;
+                        flex-direction: column;
+                        "
+                        >
+                            <p
+                            style= "display: flex;
+                            margin: 0px;
+                            color:rgb(131,150,141);
+                            ">
+                                Country code
+                            </p>
+
+                            <input
+                            type="text"
+                            style="width:90px;
+                            ">
+
+                        </div>
+
+                        <div
+                        style=  "display: flex;
+                        margin: 0px;
+                        height: 40px;
+                        flex-direction: column;
+                        align-items: flex-end;
+                        "
+                        >
+                            <p>-</p>
+                    </div>
+                        
+                    <div
+                    style=  "display: flex;
+                    margin: 0px;
+                    height: 40px;
+                    flex-direction: column;
+                    "
+                    >
+                        <p
+                        style= "display: flex;
+                        margin: 0px;
+                        color:rgb(131,150,141);
+                        ">
+                            City code
+                        </p>
+
+                        <input
+                        type="text"
+                        style="width:60px;
+                        ">
+
+                    </div>
+
+                    <div
+                    style=  "display: flex;
+                    margin: 0px;
+                    height: 40px;
+                    flex-direction: column;
+                    align-items: flex-end;
+                    "
+                    >
+                        <p>-</p>
+                    </div>
+                        
+                        <div
+                        style=  "display: flex;
+                        margin: 0px;
+                        height: 40px;
+                        flex-direction: column;
+                        "
+                        >
+                            <p
+                            style= "display: flex;
+                            margin: 0px;
+                            color:rgb(131,150,141);
+                            ">
+                                Phone Number
+                            </p>
+
+                            <input
+                            type="text"
+                            style="width:200px;
+                            ">
+                            
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <div
+                    style="display: flex;
+                    gap: 20px;
+                    align-items: center;
+                    height:35px;
+                    "
+                >
+                
+                    <p
+                        style="display: inline-flex;
+                        margin: 0px;
+                        padding: 0px 10px;
+                        justify-content: flex-end;
+                        background-color: rgb(224,239,232);
+                        color:rgb(131,150,141);
+                        width: 300px;
+                        height: 30px;
+                        align-items: center;"
+                    >
+                        Mobile Phone
+                    </p>
+
+                    <input
+                    type="text"
+                    style=  "display: flex;
+                            margin: 0px;
+                            width: 350px;
+                            height: 20px;
+                            "
+                    >
+
+                </div>
+
+                <div
+                    style="display: flex;
+                    gap: 20px;
+                    align-items: center;
+                    height:100px;
+                    "
+                >
+                
+                    <p
+                        style="display: inline-flex;
+                        margin: 0px;
+                        padding: 0px 10px;
+                        justify-content: flex-end;
+                        background-color: rgb(224,239,232);
+                        color:rgb(131,150,141);
+                        width: 300px;
+                        height: 90px;
+                        align-items: center;"
+                    >
+
+                    <span style="color:red">*</span>
+
+                        Your Postal Address
+                    </p>
+
+                    <input
+                    type="text" required
+                    style=  "display: flex;
+                            margin: 0px;
+                            width: 450px;
+                            height: 85px;
+                            "
+                    >
+
+                </div>
+
+                <div
+                    style="display: flex;
+                    gap: 20px;
+                    align-items: center;
+                    height:35px;
+                    "
+                >
+                
+                    <p
+                        style="display: inline-flex;
+                        margin: 0px;
+                        padding: 0px 10px;
+                        justify-content: flex-end;
+                        background-color: rgb(224,239,232);
+                        color:rgb(131,150,141);
+                        width: 300px;
+                        height: 30px;
+                        align-items: center;"
+                    >
+
+                    <span style="color:red">*</span>
+
+                        Country
+                    </p>
+
+                    <select
+                    style=  "display: flex;
+                            margin: 0px;
+                            width: 350px;
+                            height: 20px;
+                            "
+                    >
+                        <option disabled selected> -------Select one------------- </option>
+                        <option> EGYPT </option>
+                        <option> USA </option>
+                        <option> ETC </option>
+
+                    </select>
+
+                </div>
+
+                <div
+                    style="display: flex;
+                    gap: 20px;
+                    align-items: center;
+                    height:35px;
+                    "
+                >
+                
+                    <p
+                        style="display: inline-flex;
+                        margin: 0px;
+                        padding: 0px 10px;
+                        justify-content: flex-end;
+                        background-color: rgb(224,239,232);
+                        color:rgb(131,150,141);
+                        width: 300px;
+                        height: 30px;
+                        align-items: center;"
+                    >
+
+                    <span style="color:red">*</span>
+
+                        Password
+                    </p>
+
+                    <input
+                    type="password" required
+                    style=  "display: flex;
+                            margin: 0px;
+                            width: 200px;
+                            height: 20px;
+                            "
+                    >
+
+                </div>
+
+                <div
+                    style="display: flex;
+                    gap: 20px;
+                    align-items: center;
+                    height:35px;
+                    "
+                >
+                
+                    <p
+                        style="display: inline-flex;
+                        margin: 0px;
+                        padding: 0px 10px;
+                        justify-content: flex-end;
+                        background-color: rgb(224,239,232);
+                        color:rgb(131,150,141);
+                        width: 300px;
+                        height: 30px;
+                        align-items: center;"
+                    >
+
+                    <span style="color:red">*</span>
+
+                        Re-Enter Password
+                    </p>
+
+                    <input
+                    type="password" required
+                    style=  "display: flex;
+                            margin: 0px;
+                            width: 200px;
+                            height: 20px;
+                            "
+                    >
+
+                </div>
+
+
+                <div
+                    style="display: flex;
+                    align-items: center;
+                    height:35px;
+                    position: relative;
+                    left: 375px;
+                    "
+                >
+                
+                <input
+                type="checkbox" required
+                style=  "display: flex;
+                        margin: 0px;
+                        height: 20px;
+                        "
+                >
+
+                    <p
+                        style="display: inline-flex;
+                        margin: 0px;
+                        padding: 0px 10px;
+                        color:rgb(131,150,141);
+                        width: 300px;
+                        height: 30px;
+                        align-items: center;
+                        "
+                    >
+                        I accept the <a href= "test.html"> Terms of use </a>
+
+                    </p>
+
+
+
+                </div>                
+
+
+                <div
+                    style="display: flex;
+                    align-items: center;
+                    height:35px;
+                    gap: 20px;
+                    position: relative;
+                    left: 375px;
+                    "
+                >
+                
+                    <input
+                    type="submit" value="Continue >>"
+                    style=  "display: flex;
+                            margin: 0px;
+                            height: 20px;
+                            "
+                    >
+
+                    <input
+                    type="reset"
+                    style=  "display: flex;
+                            margin: 0px;
+                            height: 20px;
+                            "
+                    >
+
+
+
+                </div> 
+
+
+            </form>
+        </div>
+    </body>
+
+</html>

@@ -1,0 +1,57 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var phoneBook = [];
+        var stop = false;
+        do{
+            var userOperation = prompt("Welcome to Phonebook app \nWhat do you want to do (add,search,exit)");
+            switch(userOperation){
+                case "add":
+                    addContact(phoneBook);
+                    break;
+                case "search":
+                    searchContact(phoneBook);
+                    break;
+                case "exit":
+                    stop = true;
+                    break;
+            }
+        }while(!stop)
+
+
+        function addContact(arr){
+            arr.push(new Contact(prompt("Please Enter Contact Name"),prompt("Please Enter Contact Number")));
+        }
+
+        function searchContact(arr){
+            currentSearchWord = prompt("Please enter contact name or phone to search for")
+            for(var i=0; i<arr.length; i++){
+                if(currentSearchWord == arr[i].name || currentSearchWord == arr[i].phone){
+                    arr[i].showDetails();
+                    break;
+                }
+                if(i==arr.length){
+                    alert("Contact wasn't found!");
+                }
+            }
+        }
+
+        function Contact(name,phone){
+            this.name=name;
+            this.phone=phone;
+            this.showDetails=function(){
+                alert("Contact name = "+this.name +"\n Contact phone number = "+this.phone);
+            }
+        }
+
+
+    </script>
+</head>
+<body >
+    
+</body>
+</html>

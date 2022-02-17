@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1641545455 source:d:\career\coding\iti\10_introduction to oop (using c++)\labs\lab8\02_files\main.cpp
+	<iostream>
+	<fstream>
+

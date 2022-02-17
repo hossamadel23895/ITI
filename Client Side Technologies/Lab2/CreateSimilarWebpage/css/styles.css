@@ -1,0 +1,141 @@
+.container {
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    margin: 0px 0px;
+    padding: 0px 0px;
+    align-items: center;
+  }
+
+.navigation_bar_1 {
+    display: flex;
+    height: 60px;
+    width: 100%;
+    background-color: black;
+}
+
+.navigation_bar_2 {
+    display: flex;
+    height: 20px;
+    width: 85%;
+    padding: 40px 50px;
+    background-color: rgb(75,75,75);
+    justify-content:space-evenly;
+}
+
+.nav_2_item {
+    display: flex;
+    justify-content: center;
+    position:relative;
+    width:80px;
+    color: white;
+    font-size: 20px;
+    font-family: sans-serif;
+    font-weight: 550;
+}
+
+.logo_img {
+    display:flex;
+    position: absolute;
+    top : -60px;
+    z-index: 2;
+}
+
+.body_1 {
+    display: flex;
+    position: relative;
+    width: 70vw;
+    height: 40vh;
+}
+
+.img1 {
+    position: absolute;
+    display: flex;
+    width: 70vw;
+    height: 40vh;
+    z-index: -1;
+}
+
+.body_1_vertical_div {
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    width: 350px;
+    height: 250px;
+    top:50px;
+    left:100px;
+}
+
+.body_1_vertical_div1 {
+    display: flex;
+    font-size: 45px;
+    font-family: sans-serif;
+    font-weight: 800;
+}
+
+.horizontal_line {
+    position: relative;
+    left: 50px;
+    height: 10px;
+    width: 200px;
+    clear:both;
+    border-bottom: 1px solid black;
+    height:1px; padding-top:5px;
+    margin-top:5px;
+    margin-bottom:10px;
+  }
+
+.body_1_vertical_div2 {
+    position: relative;
+    top: 30px;
+    display: flex;
+    font-size: 15px;
+    font-family: sans-serif;
+    font-weight: 500;
+}
+
+
+
+.body_2 {
+    display: flex;
+    position: relative;
+    width: 70vw;
+    height: 25vh;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.body_2_vertical_div {
+    display: flex;
+    position:relative;
+    width: 300px;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.body_2_vertical_div2 {
+    display: flex;
+    position: relative;
+    width: 2px;
+    height: 150px;
+    justify-content: center;
+    background-color: gray;
+}
+
+
+.body_2_vertical_div_2 {
+    display: flex;
+    position: relative;
+    top: 10px;
+    font-size: 15px;
+    font-family: sans-serif;
+    font-weight: 500;
+}
+
+.navigation_bar_3 {
+    display: flex;
+    height: 165px;
+    width: 100%;
+    background-color: black;
+}

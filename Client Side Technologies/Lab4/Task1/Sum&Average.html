@@ -1,0 +1,46 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        
+        var numbersArr = createArr(Number(prompt("Enter the amount of numbers you want")));
+
+        alert("The sum of your numbers = " + sumArr(numbersArr) + "\n The Average of your numbers = " + avgArr(numbersArr));
+        
+
+
+
+        function createArr(size){
+            var arr = [];
+            for(var i=0; i<size; i++){
+                arr.push(Number(prompt("Please enter your number "+ (i+1))));
+            }
+            return arr;
+        }
+
+        function sumArr(arr){
+            var sum = 0;
+            for(var i=0; i<arr.length; i++){
+                sum += arr[i];
+            }
+            return sum;
+        }
+
+        function avgArr(arr){
+            var sum=0, avg = 0;
+            for(var i=0; i<arr.length; i++){
+                sum += arr[i];
+            }
+            avg = sum / arr.length;
+            return avg;
+        }
+        
+    </script>
+</head>
+<body >
+    
+</body>
+</html>

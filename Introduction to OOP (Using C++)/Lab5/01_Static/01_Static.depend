@@ -1,0 +1,11 @@
+# depslib dependency file v1.0
+1640582287 source:d:\career\coding\iti\10_introduction to oop (using c++)\labs\lab5\01_relations\main.cpp
+	<iostream>
+	<string.h>
+	<conio.h>
+
+1640612645 source:d:\career\coding\iti\10_introduction to oop (using c++)\labs\lab5\01_static\main.cpp
+	<iostream>
+	<string.h>
+	<conio.h>
+

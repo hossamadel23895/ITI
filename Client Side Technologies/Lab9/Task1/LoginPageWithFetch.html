@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>LoginPageWithFetch</title>
+    <style>
+      .container {
+        width: 400px;
+        height: 215px;
+        margin: 120px auto;
+        padding: 15px;
+        border: 2px grey solid;
+        border-radius: 10px;
+        text-align: center;
+      }
+
+      #email {
+        width: 380px;
+        padding: 10px 5px;
+        margin: 10px auto;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+      }
+
+      #password {
+        width: 380px;
+        padding: 10px 5px;
+        margin: 10px auto;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+      }
+
+      .button {
+        width: 360px;
+        background-color: #04aa6d;
+        color: white;
+        padding: 15px 30px;
+        margin: 10px auto;
+        border: none;
+        cursor: pointer;
+      }
+
+      .button:active {
+        opacity: 0.8;
+        color: black;
+      }
+
+      #validator-text {
+        color: red;
+        padding: 0 20px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="container">
+      <form id="myForm">
+        <input
+          type="text"
+          id="email"
+          placeholder="Enter email"
+          name="uname"
+          required
+        />
+        <input
+          type="password"
+          id="password"
+          placeholder="Enter Password"
+          name="psw"
+          required
+        />
+        <button type="submit" class="button" onclick="validate(event)">
+          Login
+        </button>
+        <div id="validator-text">&nbsp;</div>
+      </form>
+    </div>
+
+    <script>
+      var email = document.getElementById("email");
+      var password = document.getElementById("password");
+      var validatorText = document.getElementById("validator-text");
+
+      function validate(e) {
+        e.preventDefault();
+        requestResponseLogin();
+      }
+      async function requestResponseLogin() {
+        var loginData = {
+          email: email.value,
+          password: password.value,
+        };
+        try {
+          var request = await fetch("https://reqres.in/api/login", {
+            method: "post",
+            body: JSON.stringify(loginData),
+            headers: {
+              "content-type": "application/json",
+            },
+          });
+          var response = await request.json();
+          console.log(response.token);
+          if (response.token !== undefined) {
+            validatorText.style.color = "Green";
+            validatorText.innerText = "login success";
+            e.preventDefault();
+          } else {
+            validatorText.style.color = "Red";
+            validatorText.innerText = response.error;
+          }
+          console.log(response);
+        } catch (e) {}
+      }
+    </script>
+  </body>
+</html>

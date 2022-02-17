@@ -1,0 +1,318 @@
+<html lang="en" class="html">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <style>
+            .html{
+                display:flex;
+                margin: 0px 0px;
+                padding: 0px 0px;
+                height: 800px;
+                align-items: center;
+                justify-content: center;
+            }
+
+            .container {
+                display: flex;
+                position: relative;
+                flex-direction: column;
+                width: 400px;
+                height: 600px;
+                background-color: rgb(55,70,85);
+                border-radius: 25px;
+                align-items: center;
+            }
+
+            .screen {
+                display: flex;
+                position: relative;
+                flex-direction: column;
+                background-color: rgb(240, 240, 240);
+                border-radius: 10px;
+                margin: 30px;
+                height: 150px;
+                width: 80%;
+            }
+
+            .resultText {
+                display: flex;
+                height: 100px;
+                position: relative;
+                left: 20px;
+                align-items: center;
+                font-size: 50px;
+                color: rgb(55,70,85);
+                font-family: Arial, Helvetica, sans-serif;
+                font-weight: 600;
+            }
+
+            .inputField{
+                display: flex;
+                height: 50px;
+                position: relative;
+                justify-content: space-between;
+            }
+
+            .inputText {
+                display: flex;
+                height: 50px;
+                width: 40%;
+                position: relative;
+                left: 20px;
+                align-items: center;
+                font-size: 20px;
+                color: rgb(55,70,85);
+                font-family: Arial, Helvetica, sans-serif;
+                font-weight: 600;
+            }
+
+            .inputOperation {
+                display: flex;
+                height: 50px;
+                width: 40%;
+                position: relative;
+                align-items: center;
+                font-size: 25px;
+                color: rgb(55,70,85);
+                font-family: Arial, Helvetica, sans-serif;
+                font-weight: 600;
+                text-align:right;
+                justify-content:flex-end;
+                right: 25px;
+            }
+            
+            .buttonsRow{
+                display: flex;
+                position: relative;
+                margin: 10px 30px 10px 30px;
+                height: 50px;
+                background-color: rgb(55,70,85);
+                border-radius: 25px;
+                width: 80%;
+                justify-content: space-between;
+                gap: 5px;
+            }
+
+            .operationButton{
+                display: flex;
+                position: relative;
+                margin: 5px;
+                background-color: rgb(25, 33, 41);
+                border-radius: 5px;
+                width: 60px;
+                height: 60px;
+                font-size: 20px;
+                color: rgb(228, 228, 228);
+                align-items: center;
+                justify-content: center;
+                font-family: Arial, Helvetica, sans-serif;
+            }
+
+            .operationButton:hover{
+                display: flex;
+                position: relative;
+                margin: 5px;
+                background-color: rgb(47, 61, 75);
+                border-radius: 5px;
+                width: 60px;
+                height: 60px;
+            }
+
+            .operationButton:active{
+                display: flex;
+                position: relative;
+                margin: 5px;
+                background-color: rgb(64, 82, 100);
+                border-radius: 5px;
+                width: 60px;
+                height: 60px;
+            }
+
+            .numberButton{
+                display: flex;
+                position: relative;
+                margin: 5px;
+                background-color: rgb(39, 51, 63);
+                border-radius: 5px;
+                width: 60px;
+                height: 60px;
+                font-size: 20px;
+                color: rgb(228, 228, 228);
+                align-items: center;
+                justify-content: center;
+                font-family: Arial, Helvetica, sans-serif;
+            }
+
+            .numberButton:hover{
+                display: flex;
+                position: relative;
+                margin: 5px;
+                background-color: rgb(60, 78, 95);
+                border-radius: 5px;
+                width: 60px;
+                height: 60px;
+            }
+
+            .numberButton:active{
+                display: flex;
+                position: relative;
+                margin: 5px;
+                background-color: rgb(79, 101, 122);
+                border-radius: 5px;
+                width: 60px;
+                height: 60px;
+            }
+            
+        </style>
+    </head>
+
+    <body class="body">
+        <div class="container" id="calculator">
+            <div class="screen">
+                <div class="resultText" id="result"></div>
+                <div class="inputField">
+                    <div class="inputText" id="input"></div>
+                    <div class="inputOperation"></div>
+                </div>
+            </div>
+
+            <div class="buttonsRow">
+                <button data-value="clear" class="operationButton">C</button>
+                <button data-value="invert" class="operationButton">+/-</button>
+                <button data-symbol="%" data-value="modulus" class="operationButton">%</button>
+                <button data-symbol="/" data-value="divide" class="operationButton">/</button>
+            </div>
+            <div class="buttonsRow">
+                <button data-value="7" class="numberButton">7</button>
+                <button data-value="8" class="numberButton">8</button>
+                <button data-value="9" class="numberButton">9</button>
+                <button data-symbol="*" data-value="multiply" class="operationButton">*</button>
+            </div>
+            <div class="buttonsRow">
+                <button data-value="4" class="numberButton">4</button>
+                <button data-value="5" class="numberButton">5</button>
+                <button data-value="6" class="numberButton">6</button>
+                <button data-symbol="-" data-value="minus" class="operationButton">-</button>                
+            </div>
+            <div class="buttonsRow">
+                <button data-value="1" class="numberButton">1</button>
+                <button data-value="2" class="numberButton">2</button>
+                <button data-value="3" class="numberButton">3</button>
+                <button data-symbol="+" data-value="plus" class="operationButton">+</button>
+            </div>
+            <div class="buttonsRow">
+                <button data-value="0" class="numberButton" style="width: 143px;">0</button>
+                <button data-value="." class="numberButton">.</button>
+                <button data-symbol="=" data-value="calculate" class="operationButton">=</button>                
+            </div>
+        </div>
+
+        <script>
+            const calculator = document.getElementById("calculator");
+            const buttons = calculator.getElementsByTagName("button");
+            const input = document.getElementById("input");
+            const result = document.getElementById("result");
+            let currentValue = '';
+            let nextOperation = '';
+            let secondOperand = '';
+            let firstOperand = 0;
+            let symbol = '';
+            let resultValue = 0;
+            let reset = false;
+            const calculate = () => {
+            secondOperand = parseFloat(secondOperand);
+            switch (nextOperation) {
+                case 'plus':
+                resultValue = firstOperand + secondOperand;
+                break;
+                case 'minus':
+                resultValue = firstOperand - secondOperand;
+                break;
+                case 'multiply':
+                resultValue = firstOperand * secondOperand;
+                break;
+                case 'divide':
+                resultValue = firstOperand / secondOperand;
+                resultValue = resultValue.toFixed(2);
+                break;
+                case 'modulus':
+                resultValue = firstOperand % secondOperand;
+                break;
+                default:
+                resultValue = firstOperand;
+                break;
+            }
+            nextOperation = '';
+            symbol = '';
+            secondOperand = '';
+            firstOperand = resultValue;
+            input.textContent = firstOperand;
+            input.setAttribute('data-value', firstOperand);
+            reset = true;
+            }
+            const onClickHandler = (e) => {
+            const target = e.target;
+            const value = target.getAttribute("data-value");
+            const numericValue = parseInt(value, 10);
+            if (!isNaN(numericValue) || value === '.') {
+                if (input.textContent === '0' || reset) {
+                input.textContent = value;
+                } else {
+                input.textContent += value === '.' ? value : numericValue;
+                }
+                reset = false;
+                if (nextOperation === '') {
+                firstOperand = parseFloat(input.textContent);
+                } else {
+                secondOperand += value;
+                }
+                input.setAttribute('data-value', input.textContent);
+            } else {
+                switch (value) {
+                case 'clear':
+                    result.textContent = '0';
+                    input.textContent = '0';
+                    currentValue = '';
+                    result.setAttribute("data-value", currentValue);
+                    nextOperation = '';
+                    symbol = '';
+                    break;
+                case 'invert':
+                    currentValue = result.textContent;
+                    currentValue = (-1 * parseFloat(currentValue)).toString();
+                    result.textContent = currentValue;
+                    result.setAttribute("data-value", currentValue);
+                    nextOperation = '';
+                    symbol = '';
+                    break;
+                case 'calculate':
+                    calculate();
+                    result.textContent = resultValue;
+                    result.setAttribute("data-value", currentValue);
+                    break;
+                default:
+                    symbol = target.getAttribute('data-symbol');
+                    if (nextOperation === '') {
+                    firstOperand = parseFloat(input.textContent);
+                    input.textContent += ` ${symbol} `;
+                    } else {
+                    input.textContent = input.textContent.replace(/[+-/*%]/, symbol);
+                    }
+                    reset = false;
+                    nextOperation = value;
+                    break;
+                }
+            }
+            };
+            for (let button of buttons) {
+            button.addEventListener("click", onClickHandler);
+            }
+            
+        </script>
+
+    </body>
+</html>
+
+
+

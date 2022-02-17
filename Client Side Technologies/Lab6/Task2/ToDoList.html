@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="google" content="notranslate">
+    <title>To do list</title>
+    <style>
+      body {
+        display: flex;
+        background: #333333;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+        height: 90vh;
+      }
+
+      .listBody {
+        display: flex;
+        flex-direction: column;
+        background: #505050;
+        width: 500px;
+        border-radius: 25px;
+        padding: 20px;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+      }
+
+      ul {
+        display: flex;
+        flex-direction: column;
+        list-style-type: none;
+        background: #505050;
+        width: 90%;
+        border-radius: 25px;
+        padding: 0px 20px 20px 20px;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+      }
+
+      li {
+        display: flex;
+        align-items: flex-end;
+        overflow-wrap:normal;
+        flex-wrap: wrap;
+        background: rgb(143, 143, 143);
+        width: 100%;
+        border-radius: 5px;
+        border:2px solid #686868;
+        padding: 15px;
+      }
+
+      p {
+        display: flex;
+        font-family: sans-serif;
+        font-size: 20px;
+        height: 100%;
+        margin: 0px;
+        padding: 0px;
+        color: rgb(255, 255, 255);
+        text-shadow: 0 0 5px #272727;
+        width:85%;
+        word-break: break-all;
+      }
+
+      .doneBtn{
+        display: flex;
+        background-color: #43a047;
+        border-radius: 5px;
+      }
+
+      .deleteBtn{
+        display: flex;
+        background-color: #902323;
+        border-radius: 5px;
+      }
+
+      .taskArea {
+        display: flex;
+        align-items: flex-end;
+        width: 90%;
+        border-radius: 5px;
+        padding: 15px;
+      }
+
+      .taskAreaText{
+        display: flex;
+        font-family: sans-serif;
+        font-size: 20px;
+        margin: 0px;
+        padding: 0px;
+        color: rgb(255, 255, 255);
+        text-shadow: 0 0 5px #272727;
+      }
+
+      .taskAreaInputField{
+        display: flex;
+        width: 60%;
+        margin: 0px 30px 0px 30px;
+        padding: 0px 0px 0px 10px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        font-size: 18px;
+      }
+
+      .taskAreaButton{
+        display: flex;
+        justify-content: center;
+        background-color: #43a047;
+        border-radius: 5px;
+        width: 70px;
+        height: 26px;
+        font-size: 18px;
+        font-family: sans-serif;
+        color: rgb(255, 255, 255);
+        text-shadow: 0 0 5px #272727;
+      }
+
+    </style>
+  </head>
+  <body>
+
+
+
+
+    <div class="listBody">
+      <ul id="listTag">
+
+      </ul>
+
+      <div class="taskArea">
+        <div class="taskAreaText">Task</div>
+        <input class="taskAreaInputField" placeholder="Task name..." onkeyup="if(event.keyCode === 13){addTask();}">
+        <button class="taskAreaButton" onclick="addTask();">Add</button>
+      </div>
+    </div>
+
+
+
+
+
+
+    <script>
+      function addTask(){
+        if(document.getElementsByClassName("taskAreaInputField")[0].value!=""){
+        var taskInput = document.getElementsByClassName("taskAreaInputField")[0].value;
+        var listElement = document.getElementById("listTag");
+        var addTaskString =   `
+                              <li>
+                                <p> ${taskInput} </p>
+                                <button class="doneBtn" onclick="toggleTaskDone(event)">&#10003;</button>
+                                <button class="deleteBtn" onclick="deleteTask(event)">&#x2715;</button>
+                              </li>
+                              `;
+        listElement.insertAdjacentHTML("afterBegin", addTaskString);
+        document.getElementsByClassName("taskAreaInputField")[0].value = "";
+        }
+      }
+
+      function toggleTaskDone(e){
+        if(e.target.parentNode.style.background != "rgb(75, 135, 75)"){
+          e.target.parentNode.style.background = "rgb(75, 135, 75)";
+        }else{
+          e.target.parentNode.style.background = "rgb(143, 143, 143)";
+        }
+      }
+
+      function deleteTask(e){
+        e.target.parentNode.remove();
+      }
+    </script>
+  </body>
+</html>

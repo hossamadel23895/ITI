@@ -1,0 +1,15 @@
+# depslib dependency file v1.0
+1639832728 source:d:\career\coding\iti\10_introduction to oop (using c++)\labs\lab2\class\main.cpp
+	<iostream>
+	<string.h>
+
+1640172927 source:d:\career\coding\iti\10_introduction to oop (using c++)\labs\lab3\01_constructors & destructors\main.cpp
+	<iostream>
+	<string.h>
+
+1640447438 source:d:\career\coding\iti\10_introduction to oop (using c++)\labs\lab4\01_operators overloading\main.cpp
+	<iostream>
+	<string.h>
+	<conio.h>
+	<string>
+

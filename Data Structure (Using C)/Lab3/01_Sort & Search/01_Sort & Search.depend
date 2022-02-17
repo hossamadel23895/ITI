@@ -1,0 +1,10 @@
+# depslib dependency file v1.0
+1638868174 source:d:\career\coding\iti\08_data structure\labs\lab3\01_sort & search\01_sort & search\main.c
+	<stdio.h>
+	<stdlib.h>
+
+1638892996 source:d:\career\coding\iti\08_data structure\labs\lab3\01_sort & search\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+

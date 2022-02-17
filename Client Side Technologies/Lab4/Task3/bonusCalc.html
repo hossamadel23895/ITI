@@ -1,0 +1,40 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+            var number1 = Number(prompt("Please enter your first number"));
+            var operator = prompt("please enter your first operation (sum,subtract,multi,division,moduls)");
+            var number2 = Number(prompt("Please enter your second number"));
+
+            do{
+                switch(operator){
+                    case "sum":
+                        number1 = number1+number2;
+                        break;
+                    case "subtract":
+                        number1 = number1-number2;
+                        break;
+                    case "multi":
+                        number1 = number1*number2;
+                        break;
+                    case "division":
+                        number1 = number1/number2;
+                        break;
+                        case "moduls":
+                        number1 = number1%number2;
+                        break;
+                }
+                alert("Your operation result = " + number1);
+                var operator = prompt("please enter another operation (sum,subtract,multi,division,moduls)");
+                var number2 = Number(prompt("Please enter another number"));
+
+            }while(true);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
