@@ -134,7 +134,8 @@
     </div>
 
     <script>
-      var savedTasks = [];
+      "use strict";
+      let savedTasks = [];
 
       function init() {
         if(localStorage.getItem("storagedSavedTasks") != null){
@@ -149,8 +150,8 @@
       init();
 
       function addTaskToPage(_taskInput) {
-        var listElement = document.getElementById("listTag");
-        var addTaskString = `
+        let listElement = document.getElementById("listTag");
+        let addTaskString = `
                               <li>
                                 <p> ${_taskInput} </p>
                                 <button class="doneBtn" onclick="toggleTaskDone(event)">&#10003;</button>
@@ -162,7 +163,7 @@
 
       function submitTask() {
         if (document.getElementsByClassName("taskAreaInputField")[0].value != "") {
-          var taskInput = document.getElementsByClassName("taskAreaInputField")[0].value;
+          let taskInput = document.getElementsByClassName("taskAreaInputField")[0].value;
           addTaskToPage(taskInput);
           document.getElementsByClassName("taskAreaInputField")[0].value = "";
           savedTasks.push(taskInput);
@@ -179,7 +180,7 @@
       }
 
       function deleteTask(e) {
-        toBeDeletedTask = e.target.parentNode.firstElementChild.innerHTML;
+        let toBeDeletedTask = e.target.parentNode.firstElementChild.innerHTML;
         savedTasks.splice(toBeDeletedTask, 1);
         localStorage.setItem("storagedSavedTasks", JSON.stringify(savedTasks));
         e.target.parentNode.remove();
