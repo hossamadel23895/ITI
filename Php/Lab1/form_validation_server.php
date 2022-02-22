@@ -9,18 +9,23 @@
 
     if (isset($_POST["submit"])) {
 
-        $_validated = false;
+        $_validated = true;
 
         if (empty($_POST["name"]) || !(strlen(trim($_POST["name"])) < 100)) {
             echo "Name is not valid!<br>";
-        } else if (empty($_POST["email"]) || !filter_var($_POST["email"], FILTER_VALIDATE_EMAIL)) {
+            $_validated = false;
+        }
+        if (empty($_POST["email"]) || !filter_var($_POST["email"], FILTER_VALIDATE_EMAIL)) {
             echo "Email is not valid!<br>";
-        } else if (empty($_POST["message"])) {
+            $_validated = false;
+        }
+        if (empty($_POST["message"])) {
             echo "Message can't be empty!<br>";
-        } else if (strlen(trim($_POST["message"])) > 255) {
+            $_validated = false;
+        }
+        if (strlen(trim($_POST["message"])) > 255) {
             echo "Message is too long!<br>";
-        } else {
-            $_validated = true;
+            $_validated = false;
         }
 
         if ($_validated) {
