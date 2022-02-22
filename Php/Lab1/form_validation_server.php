@@ -5,39 +5,6 @@
 </head>
 
 <body>
-    <?php
-
-    if (isset($_POST["submit"])) {
-
-        $_validated = true;
-
-        if (empty($_POST["name"]) || !(strlen(trim($_POST["name"])) < 100)) {
-            echo "Name is not valid!<br>";
-            $_validated = false;
-        }
-        if (empty($_POST["email"]) || !filter_var($_POST["email"], FILTER_VALIDATE_EMAIL)) {
-            echo "Email is not valid!<br>";
-            $_validated = false;
-        }
-        if (empty($_POST["message"])) {
-            echo "Message can't be empty!<br>";
-            $_validated = false;
-        }
-        if (strlen(trim($_POST["message"])) > 255) {
-            echo "Message is too long!<br>";
-            $_validated = false;
-        }
-
-        if ($_validated) {
-            echo "<h3>Thank you for contacting Us</h3>";
-            echo "<b>Name:</b> {$_POST["name"]}<br />";
-            echo "<b>Email:</b> {$_POST["email"]}<br />";
-            echo "<b>Name:</b> {$_POST["message"]}<br />";
-            $_POST = array();
-        }
-    }
-
-    ?>
     <h3> Contact Form </h3>
     <div>
 
@@ -64,6 +31,38 @@
         <input name="clear" type="reset" value="clear form" />
 
     </form>
+
+    <?php
+    if (isset($_POST["submit"])) {
+
+        $validated = true;
+
+        if (empty($_POST["name"]) || !(strlen(trim($_POST["name"])) < 100)) {
+            echo "Name is not valid!<br>";
+            $validated = false;
+        }
+        if (empty($_POST["email"]) || !filter_var($_POST["email"], FILTER_VALIDATE_EMAIL)) {
+            echo "Email is not valid!<br>";
+            $validated = false;
+        }
+        if (empty($_POST["message"]) && $_POST["message"] != 0) {
+            echo "Message can't be empty!<br>";
+            $validated = false;
+        }
+        if (strlen(trim($_POST["message"])) > 255) {
+            echo "Message is too long!<br>";
+            $validated = false;
+        }
+
+        if ($validated) {
+            echo "<h3>Thank you for contacting Us</h3>";
+            echo "<b>Name:</b> {$_POST["name"]}<br />";
+            echo "<b>Email:</b> {$_POST["email"]}<br />";
+            echo "<b>Name:</b> {$_POST["message"]}<br />";
+            $_POST = array();
+        }
+    }
+    ?>
 </body>
 
 </html>
