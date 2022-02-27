@@ -9,11 +9,14 @@
     <script>
       "use strict";
 
-      const str = "Twas the night before Christmas";
+      function getVoteCount(votes) {
+        return votes.upvotes - votes.downvotes;
+      }
 
-      let start = 0;
-      let length = 4;
-      console.log(str.slice(1));
+      //{ upvotes: 13, downvotes: 0 }
+
+      let leapYear = (year) => year % 400 === 0 || (year % 4 === 0 && year % 100 != 0);
+      console.log(leapYear(1900));
     </script>
   </body>
 </html>
