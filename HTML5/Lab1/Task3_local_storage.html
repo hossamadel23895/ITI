@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Local Storage</title>
+  </head>
+  <body>
+    <div><p>Number of your visits to the site</p></div>
+    <script>
+      localStorage.visitTimes =
+        Number(localStorage.visitTimes) != 1
+          ? Number(localStorage.visitTimes) + 1
+          : 1;
+      document.writeln(localStorage.visitTimes);
+    </script>
+  </body>
+</html>
