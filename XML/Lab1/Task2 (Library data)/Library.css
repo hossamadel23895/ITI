@@ -1,0 +1,25 @@
+* {
+  display: block;
+  text-align: center;
+  margin: 10px;
+}
+
+librarian {
+  font-size: 50px;
+  color: black;
+}
+
+author {
+  font-size: 40px;
+  color: blue;
+}
+
+preface {
+  font-size: 30px;
+  color:blueviolet;
+}
+
+section {
+  font-size: 20px;
+  color:brown;
+}

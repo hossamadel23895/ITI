@@ -1,0 +1,35 @@
+* {
+  display: block;
+  text-align: center;
+  margin: 10px;
+}
+
+name {
+  font-size: 40px;
+  color: green;
+}
+phone {
+  font-size: 30px;
+  color: blue;
+}
+address {
+  font-size: 25px;
+}
+Street {
+  color: red;
+}
+Building {
+  color:aquamarine;
+}
+Number {
+  color: yellowgreen;
+}
+Region {
+  color: aqua;
+}
+City {
+  color:blueviolet
+}
+Country {
+  color:brown;
+}

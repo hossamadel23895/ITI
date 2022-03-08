@@ -1,7 +1,6 @@
 <?php
 
-class Counter
-{
+class Counter {
     public static function getCount() {
         if (file_exists(FILE_PATH)) {
             $fileContents = file_get_contents(FILE_PATH);
@@ -16,5 +15,4 @@ class Counter
         fwrite($filePointer, $count + 1);
         fclose($filePointer);
     }
-
 }

@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/css" href="Library.css"?>
+
+<Library location="test location" description="test discription">
+    <librarian>Librarian Name</librarian>
+    <books>
+        <book title="test book title" ISBN="1234">
+            <author> Test Author </author>
+            <preface> Test Preface </preface>
+            <parts>
+                <part title="test part title">
+                    <chapters>
+                        <chapter title="test chapter title" summary="test chapter summary">
+                            <sections>
+                                <section> test section </section>
+                            </sections>
+                        </chapter>
+                    </chapters>
+                </part>
+            </parts>
+        </book>
+    </books>
+</Library>
