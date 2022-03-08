@@ -1,9 +1,10 @@
 <?xml version="1.0"?>
 <?xml-stylesheet type="text/css" href="Employees.css"?>
 
-<Employees email="email@gmail.com">
+<Employees>
     <Employee>
         <name>Emp1</name>
+        <email> email@gmail.com </email>
         <phones>
             <phone type="home">0123</phone>
             <phone type="work">0456</phone>

@@ -8,6 +8,10 @@ name {
   font-size: 40px;
   color: green;
 }
+email {
+  font-size: 30px;
+  color: rgb(114, 42, 182);
+}
 phone {
   font-size: 30px;
   color: blue;
@@ -19,7 +23,7 @@ Street {
   color: red;
 }
 Building {
-  color:aquamarine;
+  color: aquamarine;
 }
 Number {
   color: yellowgreen;
@@ -28,8 +32,8 @@ Region {
   color: aqua;
 }
 City {
-  color:blueviolet
+  color: blueviolet;
 }
 Country {
-  color:brown;
+  color: brown;
 }
