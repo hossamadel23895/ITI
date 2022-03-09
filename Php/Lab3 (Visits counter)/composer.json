@@ -1,20 +1,13 @@
 {
   "name": "vendor_name/day3",
   "description": "description",
-  "minimum-stability": "stable",
-  "license": "proprietary",
-  "authors": [
-    {
-      "name": "Ahmed",
-      "email": "email@example.com"
-    }
-  ],
+  "license": "MIT",
   "autoload": {
-    "classmap": ["models"],
+    "classmap": [
+      "model"
+    ],
     "files": [
       "config.php"
     ]
-  },
-  "require": {
   }
 }
