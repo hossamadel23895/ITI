@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/css" href="Employees.css"?>
+<Employees xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="Employees.xsd">
+    <Employee>
+        <name>Emp1</name>
+        <email> email@gmail.com </email>
+        <phones>
+            <phone type="home">0123</phone>
+            <phone type="work">0456</phone>
+            <phone type="mobile">0789</phone>
+        </phones>
+        <addresses>
+            <address>
+                <Street>Street Name 1</Street>
+                <Building>Building Name 1</Building>
+                <Number>Number 1</Number>
+                <Region>Region Name 1</Region>
+                <City>City Name 1</City>
+                <Country>Country Name 1</Country>
+            </address>
+            <address>
+                <Street>Street Name 2</Street>
+                <Building>Building Name 2</Building>
+                <Number>Number 2</Number>
+                <Region>Region Name 2</Region>
+                <City>City Name 2</City>
+                <Country>Country Name 2</Country>
+            </address>
+        </addresses>
+    </Employee>
+</Employees>
