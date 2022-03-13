@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="Employees.xsl"?>
+<Employees>
+    <Employee>
+        <name>Emp1</name>
+        <email> email@gmail.com </email>
+        <phones>
+            <phone type="home">0123</phone>
+            <phone type="work">0456</phone>
+            <phone type="mobile">0789</phone>
+        </phones>
+        <address>
+            <Street>Street 1</Street>
+            <Building>Building 1</Building>
+            <Number>Number 1</Number>
+            <Region>Region 1</Region>
+            <City>City 1</City>
+            <Country>Country 1</Country>
+        </address>
+    </Employee>
+</Employees>
