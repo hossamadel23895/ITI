@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="container">
+      <video autoplay="true" id="videoElement"></video>
+
+      <button onclick="takescreenshot();">Take ScreenShot</button>
+      <canvas id="showscreenshot"></canvas>
+    </div>
+    <script>
+      var video = document.querySelector("#videoElement");
+      var canvas = document.querySelector("#showscreenshot");
+
+      async function startCamera() {
+        if (navigator.mediaDevices && navigator.mediaDevices.getUserMedia) {
+          let stream = await navigator.mediaDevices.getUserMedia({
+            video: true,
+            audio: false,
+          });
+          video.srcObject = stream;
+        }
+      }
+      
+      function takescreenshot() {
+        canvas.width = video.videoWidth;
+        canvas.height = video.videoHeight;
+        let ctx = canvas.getContext("2d");
+        ctx.drawImage(video, 0, 0);
+        // Other browsers will fall back to image/png
+        let imgAsStr = canvas.toDataURL("image/webp");
+        console.log(imgAsStr);
+        localStorage.myimage = imgAsStr;
+        img.src = canvas.toDataURL("image/webp");
+      }
+
+      startCamera();
+
+    </script>
+  </body>
+</html>
