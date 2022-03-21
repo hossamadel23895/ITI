@@ -1,0 +1,14 @@
+{
+  "name": "vendor/project",
+  "description": "simple project",
+  "license": "MIT",
+  "require": {},
+  "autoload": {
+    "classmap": [
+      "Model"
+    ],
+    "files": [
+      "config.php"
+    ]
+  }
+}

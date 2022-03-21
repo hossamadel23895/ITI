@@ -32,11 +32,6 @@
         canvas.height = video.videoHeight;
         let ctx = canvas.getContext("2d");
         ctx.drawImage(video, 0, 0);
-        // Other browsers will fall back to image/png
-        let imgAsStr = canvas.toDataURL("image/webp");
-        console.log(imgAsStr);
-        localStorage.myimage = imgAsStr;
-        img.src = canvas.toDataURL("image/webp");
       }
 
       startCamera();
