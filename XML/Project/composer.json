@@ -1,0 +1,10 @@
+{
+  "name": "vendor-name/project-name",
+  "description": "my package description",
+  "license": "MIT",
+  "autoload": {
+    "classmap": [
+      "model"
+    ]
+  }
+}

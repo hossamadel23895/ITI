@@ -1,0 +1,109 @@
+#search_bar {
+  margin-left: 7.5%;
+  margin-bottom: 5%;
+  margin-top: 5%;
+  width: 60%;
+  height: 15%;
+  font-size: 20px;
+}
+
+#search_area {
+  display: flex;
+  position: relative;
+}
+
+#search_btn {
+  color: #ffff;
+  font-size: 18px;
+}
+
+body {
+  background-color: #283e2f;
+  font-family: "Times New Roman", Times, serif;
+}
+
+form {
+  background-color: #5a5938;
+  max-width: 500px;
+  margin: 50px auto;
+  padding: 30px 20px;
+  box-shadow: 2px 5px 10px rgba(0, 0, 0, 0.5);
+}
+
+.form-control {
+  text-align: left;
+  margin-bottom: 25px;
+}
+
+.form-control label {
+  display: block;
+  margin-bottom: 10px;
+}
+
+.form-control input {
+  border: 1px solid #777;
+  border-radius: 2px;
+  padding: 10px;
+  display: block;
+  width: 95%;
+}
+
+button {
+  height: 50px;
+  background-color: #283e2f;
+  border: 1px solid #777;
+  border-radius: 2px;
+  font-family: inherit;
+  font-size: 21px;
+  width: 100%;
+  margin: 20px;
+  color: #ffff;
+}
+
+.button_area {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.number {
+  margin-bottom: 10px;
+  background: #334833;
+  color: #fff;
+  height: 30px;
+  width: 30px;
+  display: inline-block;
+  font-size: 0.8em;
+  margin-right: 4px;
+  line-height: 30px;
+  text-align: center;
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.2);
+  border-radius: 15px 15px 15px 0px;
+  margin-left: 0%;
+  padding-left: 0%;
+}
+
+legend {
+  color: #ffff;
+  font-size: 20px;
+}
+
+.emps_number {
+  text-align: center;
+  color: #ffff;
+  font-size: 26px;
+  font-weight: 600;
+}
+
+input {
+  font-size: 20px;
+  font-family: "Times New Roman", Times, serif;
+  font-weight: 300;
+}
+
+#app_message {
+  font-size: 25px;
+  color: white;
+  font-weight: 600;
+  text-align: center;
+}

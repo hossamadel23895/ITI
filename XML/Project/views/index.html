@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+    <html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="views/styles/index.css">
+        <title>Employees app</title>
+
+    </head>
+
+    <body>
+
+        <form action="index.php" method="POST">
+            <div class="form">
+                <div class="emps_number">
+                    <label for="number">Employee :</label>
+                    <label><?php echo ($emp_index + 1) ?></label>
+                    <label>of</label>
+                    <label><?php echo ($emps_number) ?></label>
+                </div>
+
+                <legend><span class="number">1</span>Name </legend>
+                <div class="form-control">
+                    <input type="text" id="name" name="name" value="<?php echo ($employee['name']) ?>" />
+                </div>
+
+
+                <legend><span class="number">2</span> Phone</legend>
+                <div class="form-control">
+                    <input type="text" id="phone" name="phone" value="<?php echo ($employee['phone']) ?>" />
+                </div>
+
+                <legend><span class="number">3</span>Address</legend>
+                <div class="form-control">
+                    <input type="text" id="address" name="address" value="<?php echo ($employee['address']) ?>" />
+                </div>
+
+                <legend><span class="number">4</span>Email</legend>
+                <div class="form-control">
+                    <input type="text" id="email" name="email" value="<?php echo ($employee['email']) ?>" />
+                </div>
+                <div class="search_area">
+                    <input type="search" placeholder="Enter a name to search for" id="search_bar" name="search_name"/>
+                    <input id="search_btn" type="submit" name="search" value="Search by Name" style="background-color: #345830;">
+                    </input>
+                </div>
+                <div class="button_area">
+                    <button type="submit" name="insert">
+                        Insert
+                    </button>
+                    <button type="submit" name="update">
+                        Update
+                    </button>
+                    <button type="submit" name="delete">
+                        Delete
+                    </button>
+                </div>
+            </div>
+
+            <div class="button_area">
+                <button type="submit" name="previous">
+                    Prev
+                </button>
+                <button type="submit" name="next">
+                    Next
+                </button>
+            </div>
+            <div id="app_message"><?php echo ($app_message) ?></div>
+        </form>
+    </body>
+
+    </html>

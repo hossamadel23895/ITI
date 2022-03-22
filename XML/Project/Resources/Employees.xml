@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="Employees.xsl"?>
+<Employees>
+
+
+    <Employee>
+        <name>Test 10</name>
+        <phone>9876</phone>
+        <address>Sidi gaber, Alexandria</address>
+        <email> yousef@gmail.com </email>
+    </Employee>
+    
+    <Employee>
+        <name>Hossam</name>
+        <phone>0123</phone>
+        <address>13street, Alexandria</address>
+        <email> hossam@gmail.com </email>
+    </Employee>
+    <Employee>
+        <name>Yousef</name>
+        <phone>9876</phone>
+        <address>Sidi gaber, Alexandria</address>
+        <email> yousef@gmail.com </email>
+    </Employee>
+    <Employee>
+        <name>Test 6</name>
+        <phone>9876</phone>
+        <address>Sidi gaber, Alexandria</address>
+        <email> yousef@gmail.com</email>
+    </Employee>
+</Employees>
