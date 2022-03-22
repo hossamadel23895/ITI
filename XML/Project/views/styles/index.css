@@ -30,17 +30,17 @@ form {
   box-shadow: 2px 5px 10px rgba(0, 0, 0, 0.5);
 }
 
-.form-control {
+.form_input {
   text-align: left;
   margin-bottom: 25px;
 }
 
-.form-control label {
+.form_input label {
   display: block;
   margin-bottom: 10px;
 }
 
-.form-control input {
+.form_input input {
   border: 1px solid #777;
   border-radius: 2px;
   padding: 10px;
