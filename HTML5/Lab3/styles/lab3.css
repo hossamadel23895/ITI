@@ -1,0 +1,66 @@
+.b {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.flex,
+header {
+  display: flex;
+  justify-content: space-between;
+  text-transform: uppercase;
+}
+
+.container {
+  margin: auto;
+  padding: 20px;
+  max-width: 1000px;
+}
+
+.featured {
+  margin-left: -20px;
+  margin-right: -20px;
+}
+
+.featured h2 {
+  margin-bottom: 15px;
+  margin-left: 20px;
+}
+
+.section {
+  flex: 1;
+  padding-left: 20px;
+  padding-right: 20px;
+  width: 32%;
+}
+
+.section1 {
+  overflow: hidden;
+  height: 150px;
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.Appify {
+  background-image: url("../resources/Appify.png");
+}
+
+.Sunflower {
+  background-image: url("../resources/sunflower.jpg");
+}
+
+.Bokeh {
+  background-image: url("../resources/bokeh.jpg");
+}
+
+.logo {
+  background-image: url("../resources/logo.png");
+  height: 70px;
+  width: 70px;
+}
+
+.bottom {
+  background-image: url("../resources/background.jpg");
+  height: 300px;
+  margin-bottom: 25px;
+}
