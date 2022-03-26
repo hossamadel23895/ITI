@@ -1,0 +1,13 @@
+{
+  "name": "vendor/project",
+  "description": "simple project",
+  "license": "MIT",
+  "require": {
+    "guzzlehttp/guzzle": "*"
+  },
+  "autoload": {
+    "classmap": [
+      "Model"
+    ]
+  }
+}

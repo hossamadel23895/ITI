@@ -7,11 +7,12 @@
   <body>
     <div><p>Number of your visits to the site</p></div>
     <script>
-      let equilbrium = (x) => {
-        if (x > 0) return "positive";
-        if (x < 0) return "negative";
-        return true;
-      };
+      localStorage.setItem("lastname", "Smith");
+      localStorage.visitTimes =
+        Number(localStorage.visitTimes) != 1
+          ? Number(localStorage.visitTimes) + 1
+          : 1;
+      document.writeln(localStorage.visitTimes);
     </script>
   </body>
 </html>
