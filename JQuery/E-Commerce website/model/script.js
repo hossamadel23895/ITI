@@ -3,37 +3,19 @@ let cartArr = [];
 $(() => {
   // Render menu items (Using items.js items)
   for (let element of items) {
-    const newitem = $(".item.hidden").clone();
-    newitem.addClass("menuItem"); // Adding unique class to menu items
-    newitem
-      .removeClass("hidden")
-      .appendTo(".menu")
-      .children(".itemName")
-      .html(`${element.name}`);
-    newitem.children(".itemPrice").html(`${element.price}`);
-    newitem.children(".itemImage").attr("src", element.imgSrc);
+    const item = $(".item.hidden").clone();
+    item.addClass("menuItem").removeClass("hidden").appendTo(".menu");
+    item.children(".itemName").html(`${element.name}`);
+    item.children(".itemPrice").html(`${element.price}`);
+    item.children(".itemImage").attr("src", element.imgSrc);
   }
-
-  // Adding functionality to all buttons
-  $("body").on("click", ".addToCart", function () {
-    movetocart($(this));
-  });
-  $("body").on("click", "#quantatiyplus", function () {
-    increaseQuantity($(this));
-  });
-  $("body").on("click", "#quantatiyminus", function () {
-    decreaseQuantity($(this));
-  });
-  $("body").on("click", ".removebutton", function () {
-    removeItem($(this).parent(".cartItemExtraDiv").parent(".item"));
-  });
 
   // Make the Menu items draggable.
   $(".menuItem").draggable({
     stop: function (e) {
       if (e.clientX > 600 && 1000 - e.clientY > 400) {
-        movetocart($(this).children(".addToCart"));
-        billrender();
+        moveToCart($(this).children(".addToCart"));
+        billRender();
       }
     },
     helper: "clone",
@@ -44,12 +26,25 @@ $(() => {
     stop: function (e, ui) {
       if (e.clientX < 1000 && 1000 - e.clientY > 400) {
         removeItem($(ui.item));
-        billrender();
+        billRender();
       }
     },
   });
-});
 
+  // Adding functionality to all buttons
+  $("body").on("click", ".addToCart", function () {
+    moveToCart($(this));
+  });
+  $("body").on("click", "#quantatiyplus", function () {
+    increaseQuantity($(this));
+  });
+  $("body").on("click", "#quantatiyminus", function () {
+    decreaseQuantity($(this));
+  });
+  $("body").on("click", ".removebutton", function () {
+    removeItem($(this).parent(".cartItemExtraDiv").parent(".item"));
+  });
+});
 
 
 
@@ -62,8 +57,7 @@ const addCartItem = (e) => {
   // Cloning the dragged menu item and make it a cart item.
   let draggedMenuItem = e.parents(".item").clone();
   // Altering the item specific class to be a cart items.
-  draggedMenuItem.removeClass("menuItem");
-  draggedMenuItem.addClass("cartItem");
+  draggedMenuItem.removeClass("menuItem").addClass("cartItem");
   // Removing unneeded attributes.
   draggedMenuItem.children(".addToCart").remove();
   // Adding cart menu item attributes
@@ -80,10 +74,10 @@ const addCartItem = (e) => {
   };
   cartArr.push(item);
 
-  billrender();
+  billRender();
 };
 
-const movetocart = (e) => {
+const moveToCart = (e) => {
   $(() => {
     let addingDone = false;
     let draggedMenuitemName = e.siblings(".itemName").html();
@@ -126,7 +120,7 @@ const updateCartArr = () => {
   });
 };
 
-const billrender = () => {
+const billRender = () => {
   $(() => {
     let subtotal = 0;
     cartArr.forEach((element) => {
@@ -143,22 +137,29 @@ const billrender = () => {
       $(".bill > .billRow > #delivery").html("30 LE");
     }
     // Calculating discount.
-    if ((parseInt($(".bill > .billRow > #subtotal").html()) +
-        parseInt($(".bill > .billRow > #VAT").html()) + 
-        parseInt($(".bill > .billRow > #delivery").html())) >= 300) {
+    if (
+      parseInt($(".bill > .billRow > #subtotal").html()) +
+        parseInt($(".bill > .billRow > #VAT").html()) +
+        parseInt($(".bill > .billRow > #delivery").html()) >=
+      300
+    ) {
       $(".bill > .billRow > #discount").html("-30 LE");
-      $(".bill > .discount_exists").html("Congratulations, you got a discount!");
+      $(".bill > .discount_exists").html(
+        "Congratulations, you got a discount!"
+      );
     } else {
       $(".bill > .billRow > #discount").html("0 LE");
-      $(".bill > .discount_exists").html("Get 30 LE discount on orders over 300 LE");
+      $(".bill > .discount_exists").html(
+        "Get 30 LE discount on orders over 300 LE"
+      );
     }
     // Calculating Total.
     $(".bill > .billRow > #orderTotal").html(
-      parseInt($(".bill > .billRow > #subtotal").html()) + 
-      parseInt($(".bill > .billRow > #VAT").html()) +
-      parseInt($(".bill > .billRow > #delivery").html()) +
-      parseInt($(".bill > .billRow > #discount").html()) +
-      " LE"
+      parseInt($(".bill > .billRow > #subtotal").html()) +
+        parseInt($(".bill > .billRow > #VAT").html()) +
+        parseInt($(".bill > .billRow > #delivery").html()) +
+        parseInt($(".bill > .billRow > #discount").html()) +
+        " LE"
     );
   });
 };
@@ -178,7 +179,7 @@ const increaseQuantity = (e) => {
     e.parent(".cartItemExtraDiv").siblings(".itemPrice").html(newPrice);
 
     updateCartArr();
-    billrender();
+    billRender();
   });
 };
 
@@ -197,7 +198,7 @@ const decreaseQuantity = (e) => {
     let newPrice = unitPrice * newQuantity;
     e.parent(".cartItemExtraDiv").siblings(".itemPrice").html(newPrice);
     updateCartArr();
-    billrender();
+    billRender();
   });
 };
 
@@ -205,6 +206,6 @@ const removeItem = (itemObj) => {
   $(() => {
     itemObj.remove();
     updateCartArr();
-    billrender();
+    billRender();
   });
 };
