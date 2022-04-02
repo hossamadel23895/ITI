@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="Styles/Jquery.css">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js" integrity="sha512-uto9mlQzrs59VwILcLiRYeLKPPbS/bT71da/OEBYEwcdNUk8jYIy+D176RYoop1Da+f9mvkYrmj5MCLZWEtQuA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <script src="model/items.js"></script>
+    <script src="model/script.js"></script>
+
+    <title>XYZ Online Shop</title>
+
+</head>
+<body>
+    <div class="main_labels_div">
+        <h1 id="menu_label">Menu</h1>
+        <h1 id="cart_label">Cart</h1>
+    </div>
+    <div class="cartItemExtraDiv hiddentool">
+        <input type="button" value="Remove" class="removebutton">
+        <input type="button" value="+" class="quantityButton" id="quantatiyplus">
+        <input type="button" value="-" class="quantityButton" id="quantatiyminus" >
+        <label >X</label>
+        <label class="itemQuantity" >1</label>
+    </div>
+    <div class="bill hiddenbill" id="bill">
+            <label>subtotal</label>
+            <label id="subtotal"></label>
+            <label>VAT</label>
+            <label id="VAT"></label>
+            <label>delivery</label>
+            <label id="delivery"></label>
+    </br>
+        <label>TOTAL order </label>
+        <label id="orderTotal"></label>    
+    
+ </div>
+        <div class="container">
+                <div class="menu">
+                    <div class="item hidden">
+                        <img  class="itemImage"/>
+                        <label>Name :</label>
+                        <div class="itemName"> </div>
+                        <label>Price :</label>
+                        <div class="itemPrice"></div>
+                        <input type="button" value="Add to Cart" class="addToCart">
+                    </div>
+                </div>
+
+                <div class="cart"></div>
+        </div>
+        <div class="bill">
+            <div class="billRow">
+                <label>Subtotal:</label>
+                <label id="subtotal">0 LE</label>
+            </div>
+            <div class="billRow">
+                <label>VAT:</label>
+                <label id="VAT">0 LE</label>
+            </div>
+            <div class="billRow">
+            <label>Delivery:</label>
+            <label id="delivery">0 LE</label>
+            </div>
+            <div class="billRow">
+            <label>Discount:</label>
+            <label id="discount">0 LE</label>
+            </div>
+            <div class="discount_exists">Get 30 LE discount on orders over 300 LE</div>
+        <div class="billRow">
+            <label>Total:</label>
+            <label id="orderTotal">0 LE</label>
+        </div>
+        <input type="button" value="Checkout" class="checkout_button">
+     </div>
+
+</body>
+</html>

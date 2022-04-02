@@ -1,0 +1,156 @@
+body {
+  background-color: rgb(20, 20, 20);
+  color: rgb(220, 220, 220);
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+}
+
+/* Main labels styles */
+.main_labels_div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Menu Area styles */
+.menu {
+  width: 1000px;
+  height: 100%;
+  background-color: rgb(40, 40, 40);
+  margin: 40px;
+  border-radius: 10px;
+}
+#menu_label {
+  display: flex;
+  margin-left: 27%;
+  margin-bottom: 0px;
+}
+#cart_label {
+  display: flex;
+  margin-right: 18%;
+  margin-bottom: 0px;
+}
+
+/* Item styles */
+.item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.item.hidden {
+  display: none;
+}
+.itemImage {
+  width: 80px;
+  height: 80px;
+  margin: 10px 0px 5px 20px;
+  border-radius: 10px;
+}
+.item label {
+  width: 60px;
+  font-weight: 900;
+  font-size: 17px;
+}
+.itemName {
+  width: 100px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: 600;
+}
+.itemPrice {
+  width: 30px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: 600;
+}
+.addToCart {
+  margin: 20px;
+  padding: 15px;
+  border-radius: 10px;
+  background-color: rgb(190, 130, 250);
+  font-weight: 600;
+}
+
+/* Cart Area styles */
+.cart {
+  display: flex;
+  flex-direction: column;
+  width: 700px;
+  height: 475px;
+  background-color: rgb(40, 40, 40);
+  margin: 40px;
+  text-align: center;
+  border-radius: 10px;
+}
+.cartItemExtraDiv {
+  display: flex;
+  align-items: center;
+  font-size: 25px;
+  color: white;
+}
+.cartItemExtraDiv.hiddentool {
+  display: none;
+}
+.removebutton {
+  width: 80px;
+  height: 35px;
+  margin: 15px;
+  margin-left: 30px;
+  border-radius: 10px;
+  background-color: rgb(200, 0, 40);
+  color: white;
+  font-weight: 600;
+}
+.quantityButton {
+  background-color: rgb(5, 215, 195);
+  width: 35px;
+  height: 35px;
+  border-radius: 10px;
+}
+
+/* Bill Area styles */
+.bill {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  width: 400px;
+  height: 200px;
+  background-color: rgb(40, 40, 40);
+  border-radius: 10px;
+  margin: 15px;
+  padding: 7px;
+  margin-left: auto;
+  margin-right: 40px;
+}
+.bill.hiddenbill {
+  display: none;
+}
+.bill label {
+  display: inline;
+}
+.itemQuantity {
+  text-align: left;
+}
+.checkout_button {
+  margin-top: 20px;
+  padding: 15px;
+  border-radius: 10px;
+  background-color: rgb(190, 130, 250);
+  font-weight: 600;
+}
+
+.billRow {
+  display: flex;
+  margin: 7px;
+}
+
+.discount_exists {
+  font-size: 18px;
+  color: rgb(5, 215, 195);
+  margin:7px;
+}
+
+.invisible {
+  visibility: hidden;
+}
