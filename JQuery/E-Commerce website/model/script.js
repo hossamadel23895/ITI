@@ -1,5 +1,6 @@
 let cartArr = [];
 
+// The Start of the project.
 $(() => {
   // Render menu items (Using items.js items)
   for (let element of items) {
@@ -31,6 +32,8 @@ $(() => {
     },
   });
 
+  $(".cart").droppable();
+
   // Adding functionality to all buttons
   $("body").on("click", ".addToCart", function () {
     moveToCart($(this));
@@ -54,12 +57,16 @@ const addCartItem = (e) => {
   // Cloning the hidden standard item and making it unhidden.
   let cartItemExtraDiv = $(".cartItemExtraDiv.hiddentool").clone();
   cartItemExtraDiv.removeClass("hiddentool");
+  
   // Cloning the dragged menu item and make it a cart item.
   let draggedMenuItem = e.parents(".item").clone();
+
   // Altering the item specific class to be a cart items.
   draggedMenuItem.removeClass("menuItem").addClass("cartItem");
+
   // Removing unneeded attributes.
   draggedMenuItem.children(".addToCart").remove();
+  
   // Adding cart menu item attributes
   $(cartItemExtraDiv).appendTo(draggedMenuItem);
   draggedMenuItem.appendTo(".cart");
