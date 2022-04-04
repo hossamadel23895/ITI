@@ -1,0 +1,13 @@
+{
+  "name": "vendor_name/day3",
+  "description": "description",
+  "license": "MIT",
+  "autoload": {
+    "classmap": [
+      "model"
+    ],
+    "files": [
+      "config.php"
+    ]
+  }
+}
