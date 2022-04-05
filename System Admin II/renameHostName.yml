@@ -1,0 +1,8 @@
+---
+- become: true
+  hosts: all
+  name: configWebServer
+  tasks:
+    - ansible.builtin.hostname:
+        name: "{{hostname}}"
+      name: "rename host name"

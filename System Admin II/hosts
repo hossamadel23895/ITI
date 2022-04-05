@@ -1,0 +1,1 @@
+dockerClient ansible_host=10.0.0.4 ansible_user=hossam ansible_password=hossam238 hostname=dockerMachine ansible_become_password=hossam238
