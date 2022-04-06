@@ -20,58 +20,116 @@
       crossorigin="anonymous"
     ></script>
 
-    <link rel="stylesheet" href="Styles/styles.css" />
+    <link rel="stylesheet" href="styles.css"/>
 
     <title>Lab 2 bootstrap</title>
   </head>
 
-  <body class="bg-dark d-flex flex-lg-row flex-column">
-    <nav class="bg-dark d-flex flex-column gap-4">
-      <div>
-        <div class="nav_item_1_1 d-none d-lg-flex"></div>
-        <div class="nav_item_1_2 d-none d-md-flex d-lg-none"></div>
-      </div>
-      <div class="row d-flex flex-lg-column gap-4">
-        <button
-          class="col col-sm-12 nav_item_2 col-sm-12 d-flex rounded-circle justify-content-center align-items-center"
+  <body class="bg-dark" style="min-width: 725px">
+    <div class="row container-fluid justify-content-center gap-4">
+      <!-- Two needed drawn elements, only one of them is effective at each size -->
+      <div
+        class="col-lg-2 col-12 justify-content-lg-start justify-content-md-start justify-content-center h-100 gap-4"
+      >
+        <div class="row">
+          <div class="nav_item_1_1 d-none d-lg-block col-lg"></div>
+          <div class="nav_item_1_2 d-none d-md-block d-lg-none col-lg"></div>
+        </div>
+
+        <div
+          class="row justify-content-lg-start justify-content-md-start justify-content-center gap-4"
         >
-          Div 2
-        </button>
-        <div class="row d-flex flex-lg-column">
-          <button
-            class="nav_item_3 d-flex rounded-circle justify-content-center align-items-center"
-          >
-            Div 3
-          </button>
-          <button
-            class="nav_item_4 d-flex rounded-circle justify-content-center align-items-center"
-          >
-            Div 4
-          </button>
-          <button
-            class="nav_item_5 d-flex rounded-circle justify-content-center align-items-center"
-          >
-            Div 5
-          </button>
+          <div
+            class="nav_item_2 rounded-circle col-lg-12 col-md-3 col-sm-12"
+          ></div>
+          <div class="col-lg-12 col-md-9 col-sm-12">
+            <div class="row gap-4">
+              <div
+                class="col-lg-12 col d-flex justify-content-lg-start justify-content-center px-0"
+              >
+                <div class="nav_item_3 rounded-circle"></div>
+              </div>
+              <div
+                class="col-lg-12 col d-flex justify-content-lg-start justify-content-center px-0"
+              >
+                <div class="nav_item_4 rounded-circle"></div>
+              </div>
+              <div
+                class="col-lg-12 col d-flex justify-content-lg-start justify-content-center px-0"
+              >
+                <div class="nav_item_5 rounded-circle"></div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
-    </nav>
-    <div class="container d-flex" style="font-size: 50px">
-      <div class="flex-column">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi atque et
-        accusantium quos, quasi magnam illum officia adipisci numquam vero saepe
-        iusto iste distinctio eligendi dignissimos rem corporis nulla! Omnis.
-        lor Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates
-        iste nostrum alias cupiditate praesentium, numquam, perferendis
-        asperiores quisquam rerum, itaque excepturi! Aut dolorem amet autem
-        exercitationem asperiores modi, iste similique. Lorem ipsum dolor sit
-        amet consectetur adipisicing elit. Perspiciatis, molestias itaque. Earum
-        excepturi nisi porro culpa error facilis suscipit tenetur consequatur,
-        rerum eos, et nobis accusantium iusto, nam adipisci illum? Lorem ipsum
-        dolor sit amet consectetur adipisicing elit. Nesciunt eaque
-        reprehenderit amet animi sequi pariatur laudantium ad itaque ullam.
-        Veritatis repudiandae laboriosam praesentium fugit esse! Debitis vitae
-        explicabo dicta magnam?
+      <div class="col-lg-8 col-10">
+        <div
+          class="row d-flex justify-content-center pb-3 px-5"
+          style="font-size: 30px"
+        >
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dicta, in
+          molestias atque culpa vero aliquid sunt, possimus ad iste alias quidem
+          nulla dolore nostrum rem quam corrupti, mollitia aperiam labore.
+        </div>
+        <div class="row gap-2 px-5 py-3">
+          <div class="main_pic col-12 col-lg col-md"></div>
+          <div class="main_pic col-12 col-lg col-md"></div>
+          <div class="main_pic col-12 col-lg col-md"></div>
+        </div>
+        <div class="row gap-2 px-5">
+          <div class="col-12 col-lg col-md text-center">
+            <i class="bi bi-brightness-high fs-1 text-secondary"></i>
+            <div>
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+              Laboriosam assumenda facere et rerum quasi accusantium.
+            </div>
+          </div>
+          <div class="col-12 col-lg col-md text-center">
+            <i class="bi bi-brightness-high fs-1 text-secondary"></i>
+            <div>
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+              Laboriosam assumenda facere et rerum quasi accusantium.
+            </div>
+          </div>
+          <div class="col-12 col-lg col-md text-center">
+            <i class="bi bi-brightness-high fs-1 text-secondary"></i>
+            <div>
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+              Laboriosam assumenda facere et rerum quasi accusantium.
+            </div>
+          </div>
+        </div>
+        <div class="arrow-up mt-3"></div>
+        <hr />
+        <div class="row py-3 px-5 justify-content-around">
+          <div class="col-12 col-lg-3 col-md-3 h1 text-center pb-4">
+            Big header
+          </div>
+          <div class="col-12 col-lg-8 col-md-8">
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Blanditiis
+            unde similique error, sit a voluptate, consequatur vero, veritatis
+            fuga aliquid officiis suscipit odit quae illum hic sint harum
+            necessitatibus voluptatum.
+          </div>
+        </div>
+        <div class="row py-3 px-5 justify-content-around">
+          <div
+            class="video_div col-12 col-lg-7 col-md-7 text-center mb-4"
+          ></div>
+          <div class="col-12 col-lg-5 col-md-5">
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Blanditiis
+            unde similique error, sit a voluptate, consequatur vero, veritatis
+            fuga aliquid officiis suscipit odit quae illum hic sint harum
+            necessitatibus voluptatum. Lorem ipsum dolor sit, amet consectetur
+            adipisicing elit. Ducimus voluptatibus, adipisci obcaecati
+          </div>
+        </div>
+        <div class="row gap-2 px-5 py-3">
+          <div class="footer_div col-12 col-lg col-md"></div>
+          <div class="footer_div col-12 col-lg col-md"></div>
+          <div class="footer_div col-12 col-lg col-md"></div>
+        </div>
       </div>
     </div>
   </body>
