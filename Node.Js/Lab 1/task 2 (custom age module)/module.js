@@ -14,6 +14,7 @@ const calcAge = (name, bd) => {
   }
 };
 
+
 module.exports = {
   calcAge: calcAge,
 };

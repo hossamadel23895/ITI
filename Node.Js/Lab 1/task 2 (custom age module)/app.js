@@ -1,4 +1,4 @@
 const { calcAge } = require('./module.js');
 let myModule = require('./module.js');
 
-myModule.calcAge("Hossam","1995-08-23");
+myModule.calcAge("Sarah","1999-09-13");
