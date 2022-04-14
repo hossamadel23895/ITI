@@ -21,7 +21,7 @@ http
       readStream.pipe(res);
     }
 
-    // Handling random random requests.
+    // Handling random requests.
     if (!acceptedPages.includes(req.url)) {
       res.writeHead(404, { "Content-type": "text/plain" });
       res.write("Content not found!");
