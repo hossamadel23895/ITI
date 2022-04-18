@@ -23,6 +23,9 @@
         body * {
             color: rgb(220, 220, 220);
         }
+        .pagination *{
+            background-color: rgb(30, 30, 30) !important;
+        }
 
     </style>
 </head>

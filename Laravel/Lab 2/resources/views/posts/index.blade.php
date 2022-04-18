@@ -40,6 +40,11 @@
             @endforeach
         </tbody>
     </table>
+    <div class="text-center">
+        {{ $posts->links('pagination::bootstrap-5') }}
+    </div>
+
+
 
     <!-- Delete confirmation model -->
     <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
