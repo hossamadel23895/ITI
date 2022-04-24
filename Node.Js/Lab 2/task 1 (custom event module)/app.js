@@ -1,8 +1,6 @@
 var Event = require("events");
 var util = require("util");
 
-function Login() {}
-
 util.inherits(Login, Event);
 
 var loginObj = new Login();
