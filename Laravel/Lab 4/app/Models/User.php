@@ -9,8 +9,8 @@ use Illuminate\Notifications\Notifiable;
 use Laravel\Sanctum\HasApiTokens;
 use Laravelista\Comments\Commenter;
 
-
-class User extends Authenticatable {
+class User extends Authenticatable
+{
     use HasApiTokens, HasFactory, Notifiable;
     use Notifiable, Commenter;
     /**
