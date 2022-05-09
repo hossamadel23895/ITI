@@ -1,0 +1,126 @@
+<div class="department_div border border-light p-3 w-75 m-auto">
+  <div class="d-flex justify-content-center">
+    <table class="table table-bordered table-dark">
+      <thead>
+        <tr>
+          <th colspan="5" class="text-center h4">Departments Table</th>
+        </tr>
+        <tr>
+          <th scope="col">ID</th>
+          <th scope="col">Name</th>
+          <th scope="col">Location</th>
+          <th scope="col">Action</th>
+        </tr>
+      </thead>
+      <tr *ngFor="let department of departments" scope="row">
+        <td>{{ department.id }}</td>
+        <td>{{ department.name }}</td>
+        <td>{{ department.location }}</td>
+        <button
+          (click)="editSectionRender(department.id)"
+          class="btn btn-warning btn-sm mx-1 my-1"
+        >
+          Edit
+        </button>
+        <button
+          (click)="deleteSectionRender(department.id)"
+          class="btn btn-danger btn-sm mx-1 my-1"
+        >
+          Delete
+        </button>
+      </tr>
+    </table>
+  </div>
+  <div class="d-flex justify-content-end">
+    <button
+      (click)="addSectionRender()"
+      class="btn btn-success btn-sm mx-1 my-1"
+    >
+      Add New Department
+    </button>
+  </div>
+  <div class="CRUD_departments d-flex flex-column mx-auto w-75">
+    <div
+      class="d-flex justify-content-center text-center h4"
+      style="color: rgb(225, 225, 225)"
+    >
+      {{ actionHeader }}
+    </div>
+    <div *ngIf="deleteDivIsActive" class="delete_div d-flex flex-column">
+      <div style="color: rgb(225, 225, 225)" class="text-center">
+        Are you sure you want to delete This department.
+      </div>
+      <div class="w-50 m-auto">
+        <div style="color: rgb(225, 225, 225)">
+          Department ID : {{ department.id }}
+        </div>
+        <div style="color: rgb(225, 225, 225)">
+          Department Name : {{ department.name }}
+        </div>
+        <div style="color: rgb(225, 225, 225)">
+          Department Location : {{ department.location }}
+        </div>
+      </div>
+    </div>
+    <div *ngIf="inputDivIsActive" class="input_div">
+      <div
+        class="d-flex justify-content-between input_row"
+        style="color: rgb(225, 225, 225)"
+      >
+        <label>Department id</label>
+        <input
+          type="text"
+          class="bg-dark text-white"
+          [(ngModel)]="department.id"
+          placeholder="Enter Department ID"
+        />
+      </div>
+      <div
+        class="d-flex justify-content-between input_row"
+        style="color: rgb(225, 225, 225)"
+      >
+        <label>Department Name</label>
+        <input
+          type="text"
+          class="bg-dark text-white"
+          [(ngModel)]="department.name"
+          placeholder="Enter Department Name"
+        />
+      </div>
+      <div
+        class="d-flex justify-content-between input_row"
+        style="color: rgb(225, 225, 225)"
+      >
+        <label>Department Location</label>
+        <input
+          type="text"
+          class="bg-dark text-white"
+          [(ngModel)]="department.location"
+          placeholder="Enter Department Location"
+        />
+      </div>
+    </div>
+    <button
+      *ngIf="addDivIsActive"
+      class="btn btn-success align-self-end mt-3"
+      (click)="addDepartment()"
+    >
+      Confirm Add
+    </button>
+    <button
+      *ngIf="editDivIsActive"
+      class="btn btn-warning align-self-end mt-3"
+      (click)="editDepartment(department.id)"
+    >
+      Confirm Edit
+    </button>
+    <button
+      *ngIf="deleteDivIsActive"
+      class="btn btn-danger align-self-end mt-3"
+      (click)="deleteDepartment(department.id)"
+    >
+      Confirm Delete
+    </button>
+  </div>
+</div>
+<br />

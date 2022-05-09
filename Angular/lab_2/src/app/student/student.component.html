@@ -1,0 +1,143 @@
+<div class="student_div border border-light p-3 w-75 m-auto">
+  <div class="d-flex justify-content-center">
+    <table class="table table-bordered table-dark">
+      <thead>
+        <tr>
+          <th colspan="5" class="text-center h4">Students Table</th>
+        </tr>
+        <tr>
+          <th scope="col">ID</th>
+          <th scope="col">Name</th>
+          <th scope="col">Age</th>
+          <th scope="col">Dep. No.</th>
+          <th scope="col">Action</th>
+        </tr>
+      </thead>
+      <tr *ngFor="let student of students" scope="row">
+        <td>{{ student.id }}</td>
+        <td>{{ student.name }}</td>
+        <td>{{ student.age }}</td>
+        <td>{{ student.deptNo }}</td>
+        <button
+          (click)="editSectionRender(student.id)"
+          class="btn btn-warning btn-sm mx-1 my-1"
+        >
+          Edit
+        </button>
+        <button
+          (click)="deleteSectionRender(student.id)"
+          class="btn btn-danger btn-sm mx-1 my-1"
+        >
+          Delete
+        </button>
+      </tr>
+    </table>
+  </div>
+  <div class="d-flex justify-content-end">
+    <button
+      (click)="addSectionRender()"
+      class="btn btn-success btn-sm mx-1 my-1"
+    >
+      Add New Student
+    </button>
+  </div>
+  <div class="CRUD_students d-flex flex-column mx-auto w-75">
+    <div
+      class="d-flex justify-content-center text-center h4"
+      style="color: rgb(225, 225, 225)"
+    >
+      {{ actionHeader }}
+    </div>
+    <div *ngIf="deleteDivIsActive" class="delete_div d-flex flex-column">
+      <div style="color: rgb(225, 225, 225)" class="text-center">
+        Are you sure you want to delete This student.
+      </div>
+      <div class="w-50 m-auto">
+        <div style="color: rgb(225, 225, 225)">
+          Student ID : {{ student.id }}
+        </div>
+        <div style="color: rgb(225, 225, 225)">
+          Student Name : {{ student.name }}
+        </div>
+        <div style="color: rgb(225, 225, 225)">
+          Student Age : {{ student.age }}
+        </div>
+        <div style="color: rgb(225, 225, 225)">
+          Student Dep. No. : {{ student.deptNo }}
+        </div>
+      </div>
+    </div>
+    <div *ngIf="inputDivIsActive" class="input_div">
+      <div
+        class="d-flex justify-content-between input_row"
+        style="color: rgb(225, 225, 225)"
+      >
+        <label>Student id</label>
+        <input
+          type="text"
+          class="bg-dark text-white"
+          [(ngModel)]="student.id"
+          placeholder="Enter Student ID"
+        />
+      </div>
+      <div
+        class="d-flex justify-content-between input_row"
+        style="color: rgb(225, 225, 225)"
+      >
+        <label>Student Name</label>
+        <input
+          type="text"
+          class="bg-dark text-white"
+          [(ngModel)]="student.name"
+          placeholder="Enter Student Name"
+        />
+      </div>
+      <div
+        class="d-flex justify-content-between input_row"
+        style="color: rgb(225, 225, 225)"
+      >
+        <label>Student Age</label>
+        <input
+          type="text"
+          class="bg-dark text-white"
+          [(ngModel)]="student.age"
+          placeholder="Enter Student Age"
+        />
+      </div>
+      <div
+        class="d-flex justify-content-between input_row"
+        style="color: rgb(225, 225, 225)"
+      >
+        <label>Student Dep. No.</label>
+        <input
+          type="text"
+          class="bg-dark text-white"
+          [(ngModel)]="student.deptNo"
+          placeholder="Enter Student Dep. No."
+        />
+      </div>
+    </div>
+    <button
+      *ngIf="addDivIsActive"
+      class="btn btn-success align-self-end mt-3"
+      (click)="addStudent()"
+    >
+      Confirm Add
+    </button>
+    <button
+      *ngIf="editDivIsActive"
+      class="btn btn-warning align-self-end mt-3"
+      (click)="editStudent(student.id)"
+    >
+      Confirm Edit
+    </button>
+    <button
+      *ngIf="deleteDivIsActive"
+      class="btn btn-danger align-self-end mt-3"
+      (click)="deleteStudent(student.id)"
+    >
+      Confirm Delete
+    </button>
+  </div>
+</div>
+<br />
