@@ -1,0 +1,21 @@
+<div class="d-flex justify-content-center">
+  <table class="table table-bordered table-dark">
+    <thead>
+      <tr>
+        <th colspan="5" class="text-center h4">Students Table</th>
+      </tr>
+      <tr>
+        <th scope="col">ID</th>
+        <th scope="col">Name</th>
+        <th scope="col">Age</th>
+        <th scope="col">Dept. No.</th>
+      </tr>
+    </thead>
+    <tr *ngFor="let student of studentsList" scope="row">
+      <td>{{ student.id }}</td>
+      <td>{{ student.name }}</td>
+      <td>{{ student.age }}</td>
+      <td>{{ student.deptNo }}</td>
+    </tr>
+  </table>
+</div>

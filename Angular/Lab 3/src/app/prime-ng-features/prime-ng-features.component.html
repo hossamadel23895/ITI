@@ -1,0 +1,28 @@
+<div class="card my-4 mx-3 my-3">
+  <div class="card-header">prime-ng features</div>
+  <div class="d-flex align-items-center justify-content-around mt-4 mb-2">
+    <span class="p-float-label">
+      <input
+        type="text"
+        id="inputtext"
+        class="ng-tns-c52-0 p-inputtext p-component ng-star-inserted"
+      />
+      <label for="inputtext">Floating Input</label>
+    </span>
+    <label class="mx-1">calendar</label>
+    <p-calendar class="mx-1"></p-calendar>
+    <label class="mx-1">password</label>
+    <p-password class="mx-1"></p-password>
+  </div>
+  <hr />
+  <div class="d-flex justify-content-around">
+    <div class="ratingDiv d-flexr">
+      <label class="mx-3 d-flex">rating : </label>
+      <p-rating></p-rating>
+    </div>
+    <div class="ratingDiv d-flex">
+      <label class="mx-3">Stock : </label>
+      <p-knob [(ngModel)]="knobValue"></p-knob>
+    </div>
+  </div>
+</div>

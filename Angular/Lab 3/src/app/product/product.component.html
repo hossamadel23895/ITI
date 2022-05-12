@@ -1,0 +1,49 @@
+<div class="card my-4 mx-3" style="width: 90vw">
+  <div class="card-header">Product list</div>
+  <div class="my-3 ms-3">
+    <label>filter by : </label>
+    <input
+      type="text"
+      name="filter"
+      class="mx-3"
+      style="width: 200px"
+      [(ngModel)]="filterInputValue"
+    />
+  </div>
+
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col">
+          <button (click)="toggleImage()" class="btn btn-primary">
+            Show / Hide Image
+          </button>
+        </th>
+        <th scope="col">Product</th>
+        <th scope="col">Code</th>
+        <th scope="col">Available</th>
+        <th>Price</th>
+        <th>5 Star Rating</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let product of products | searchFilter: filterInputValue">
+        <!-- Empty div to keep the table structure when image is hidden -->
+        <td *ngIf="!showImage"></td>
+        <td *ngIf="showImage">
+          <img
+            style="border-radius: 10px"
+            src="{{ product.image }}"
+            alt="{{ product.name }}"
+          />
+        </td>
+
+        <td>{{ product.name }}</td>
+        <td>{{ product.code | stringConvert }}</td>
+        <td>{{ product.available | date: "MMMM dd,yyyy" }}</td>
+        <td>{{ product.price | currency: "$" }}</td>
+        <td><app-rate [rating]="product.rating"></app-rate></td>
+      </tr>
+    </tbody>
+  </table>
+</div>

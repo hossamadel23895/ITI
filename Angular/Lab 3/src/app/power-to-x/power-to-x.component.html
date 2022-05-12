@@ -1,0 +1,10 @@
+<div class="card my-4 mx-3 my-3">
+  <div class="card-header d-flex flex-column">Power calculator</div>
+  <label class="mt-2 mx-3">Enter a Number</label>
+  <input type="text" class="mx-3" [(ngModel)]="num" />
+  <label class="mt-2 mx-3">Enter Power</label>
+  <input type="text" class="mx-3" [(ngModel)]="power" />
+  <div style="width: 300px" class="my-2 mx-3">
+    Result = {{ num | powerToX: power }}
+  </div>
+</div>

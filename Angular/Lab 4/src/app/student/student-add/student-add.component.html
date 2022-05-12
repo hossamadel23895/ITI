@@ -1,0 +1,70 @@
+<div class="d-flex justify-content-end">
+  <button (click)="addSectionRender()" class="btn btn-success btn-sm mx-1 my-1">
+    Add New Student
+  </button>
+</div>
+<div class="CRUD_students d-flex flex-column mx-auto w-75">
+  <div
+    class="d-flex justify-content-center text-center h4"
+    style="color: rgb(225, 225, 225)"
+  >
+    {{ actionHeader }}
+  </div>
+  <div *ngIf="inputDivIsActive" class="input_div">
+    <div
+      class="d-flex justify-content-between input_row"
+      style="color: rgb(225, 225, 225)"
+    >
+      <label>Student id</label>
+      <input
+        type="text"
+        class="bg-dark text-white"
+        [(ngModel)]="newStudent.id"
+        placeholder="Enter Student ID"
+      />
+    </div>
+    <div
+      class="d-flex justify-content-between input_row"
+      style="color: rgb(225, 225, 225)"
+    >
+      <label>Student Name</label>
+      <input
+        type="text"
+        class="bg-dark text-white"
+        [(ngModel)]="newStudent.name"
+        placeholder="Enter Student Name"
+      />
+    </div>
+    <div
+      class="d-flex justify-content-between input_row"
+      style="color: rgb(225, 225, 225)"
+    >
+      <label>Student Age</label>
+      <input
+        type="text"
+        class="bg-dark text-white"
+        [(ngModel)]="newStudent.age"
+        placeholder="Enter Student Location"
+      />
+    </div>
+    <div
+      class="d-flex justify-content-between input_row"
+      style="color: rgb(225, 225, 225)"
+    >
+      <label>Student Dept. No.</label>
+      <input
+        type="text"
+        class="bg-dark text-white"
+        [(ngModel)]="newStudent.deptNo"
+        placeholder="Enter Student Location"
+      />
+    </div>
+  </div>
+  <button
+    *ngIf="addDivIsActive"
+    class="btn btn-success align-self-end mt-3"
+    (click)="addStudent()"
+  >
+    Confirm Add
+  </button>
+</div>

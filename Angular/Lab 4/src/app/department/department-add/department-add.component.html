@@ -1,0 +1,58 @@
+<div class="d-flex justify-content-end">
+  <button (click)="addSectionRender()" class="btn btn-success btn-sm mx-1 my-1">
+    Add New Department
+  </button>
+</div>
+<div class="CRUD_departments d-flex flex-column mx-auto w-75">
+  <div
+    class="d-flex justify-content-center text-center h4"
+    style="color: rgb(225, 225, 225)"
+  >
+    {{ actionHeader }}
+  </div>
+  <div *ngIf="inputDivIsActive" class="input_div">
+    <div
+      class="d-flex justify-content-between input_row"
+      style="color: rgb(225, 225, 225)"
+    >
+      <label>Department id</label>
+      <input
+        type="text"
+        class="bg-dark text-white"
+        [(ngModel)]="newDepartment.id"
+        placeholder="Enter Department ID"
+      />
+    </div>
+    <div
+      class="d-flex justify-content-between input_row"
+      style="color: rgb(225, 225, 225)"
+    >
+      <label>Department Name</label>
+      <input
+        type="text"
+        class="bg-dark text-white"
+        [(ngModel)]="newDepartment.name"
+        placeholder="Enter Department Name"
+      />
+    </div>
+    <div
+      class="d-flex justify-content-between input_row"
+      style="color: rgb(225, 225, 225)"
+    >
+      <label>Department Location</label>
+      <input
+        type="text"
+        class="bg-dark text-white"
+        [(ngModel)]="newDepartment.location"
+        placeholder="Enter Department Location"
+      />
+    </div>
+  </div>
+  <button
+    *ngIf="addDivIsActive"
+    class="btn btn-success align-self-end mt-3"
+    (click)="addDepartment()"
+  >
+    Confirm Add
+  </button>
+</div>
