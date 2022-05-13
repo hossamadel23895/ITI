@@ -1,0 +1,22 @@
+<div class="delete_div d-flex flex-column w-50 m-auto">
+  <div style="color: rgb(225, 225, 225)" class="text-center">
+    Are you sure you want to delete This department.
+  </div>
+  <div class="w-50 m-auto">
+    <div style="color: rgb(225, 225, 225)">
+      Department ID : {{ department!.id }}
+    </div>
+    <div style="color: rgb(225, 225, 225)">
+      Department Name : {{ department!.name }}
+    </div>
+    <div style="color: rgb(225, 225, 225)">
+      Department Location : {{ department!.location }}
+    </div>
+  </div>
+  <button
+    class="btn btn-danger align-self-end mt-3"
+    (click)="deleteDepartmentConfirm(department!.id)"
+  >
+    Confirm Delete
+  </button>
+</div>
