@@ -1,0 +1,11 @@
+a {
+  text-decoration: none !important;
+  color: rgb(200, 200, 200) !important;
+}
+a:hover {
+  color: rgb(220, 220, 220) !important;
+}
+
+.active {
+  color: rgb(255, 255, 255) !important;
+}
