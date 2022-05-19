@@ -1,0 +1,7 @@
+body {
+  background-color: black !important;
+}
+
+body * {
+  color: rgb(210, 210, 210);
+}

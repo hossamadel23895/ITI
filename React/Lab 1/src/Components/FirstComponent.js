@@ -14,7 +14,7 @@ class FirstComponent extends Component {
     return (
       <div className="content">
         <input
-          type="text"
+        type="text"
           value={this.state.userName}
           onChange={(e) => this.setState({ userName: e.target.value })}
         />
