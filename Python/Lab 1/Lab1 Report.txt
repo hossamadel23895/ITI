@@ -1,0 +1,57 @@
+1 - Function enumerate()
+    - used to add indexing to a list of for whenever indexing is needed
+    - ex:
+    l1 = ["eat", "sleep", "repeat"]
+    obj1 = enumerate(l1)
+    print (list(enumerate(l1)))
+
+        Expected output
+        [(0, 'eat'), (1, 'sleep'), (2, 'repeat')]
+
+--------------------------------------------------------------------------------------
+
+2 - A lambda function is a small anonymous function.
+
+    A lambda function can take any number of arguments, but can only have one expression.
+    
+    The power of lambda is better shown when you use them as an anonymous function inside another function.
+
+    Ex:
+        def powerFunc(n):
+            return lambda a : a * n
+
+        doublerFunc = powerFunc(2)
+
+        print(doublerFunc(5))
+
+--------------------------------------------------------------------------------------
+3 - Operator module
+---------------------
+ - Allows you to do different kinds of mathematical and logiacal operations on two numbers.
+
+ex:
+    import operator
+
+    addition = operator.add(5, 6)
+    subtraction = operator.sub(10, 4)
+    multiplication = operator.mul(3, 4)
+    division = operator.truediv(6, 3)
+
+    print (addition)
+    print (subtraction)
+    print (multiplication)
+    print (division)
+
+    equal = operator.eq(5, 6)
+    lessThan = operator.lt(10, 4)
+    lessThanEqualTo = operator.le(10, 10)
+    notEqual = operator.ne(6, 3)
+    greaterThan = operator.gt(5, 1)
+    greaterThanEqualTo = operator.ge(5, 6)
+    
+    print (equal)
+    print (lessThan)
+    print (lessThanEqualTo)
+    print (notEqual)
+    print (greaterThan)
+    print (greaterThanEqualTo)
