@@ -1,0 +1,42 @@
+{% extends 'todo/base.html' %} {% block body_content %}
+<form
+  class="CRUD_departments d-flex flex-column mx-auto w-50"
+  action="{% url 'todo:edit' todo_index%}"
+  method="POST"
+>
+  {% csrf_token %}
+  <div class="input_div">
+    <h2 class="text-center mb-5">Edit Task</h2>
+    <div
+      class="d-flex justify-content-between input_row"
+      style="color: rgb(225, 225, 225)"
+    >
+      <input name="task_index" type="text" class="d-none" value="{{todo_index}}" />
+      <label>Task Name</label>
+      <input
+        name="task_name"
+        type="text"
+        class="bg-dark text-white"
+        value="{{ todo.name }}"
+      />
+    </div>
+    <div
+      class="d-flex justify-content-between input_row"
+      style="color: rgb(225, 225, 225)"
+    >
+      <label>Task Notes</label>
+      <input
+        name="task_notes"
+        type="text"
+        class="bg-dark text-white"
+        value="{{ todo.notes }}"
+      />
+    </div>
+  </div>
+  <div class="d-flex justify-content-between">
+    <a class="btn btn-danger mt-4" href="{% url 'todo:list' %}">Back Home</a>
+    <button class="btn btn-success mt-4">Confirm Edit</button>
+  </div>
+</form>
+
+{% endblock %}
