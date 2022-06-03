@@ -1,10 +1,5 @@
-# Lab 1 (Vue)
+# Lab 3 (Vue)
 ---------------
-
-## Demo
-
-![screen-gif](./Documentation/demo.gif)
-
 
 ## Project setup
 ```
