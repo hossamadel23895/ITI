@@ -1,0 +1,62 @@
+{% extends 'general_templates/base.html' %} {% block body_content %}
+<div class="w-75 m-auto">
+  {% if messages %} {% for message in messages %}
+  <div class="alert alert-danger" role="alert">{{ message }}</div>
+  {% endfor %} {% endif %}
+  <div class="d-flex justify-content-center">
+    <table class="table table-bordered table-dark">
+      <thead>
+        <tr>
+          <th colspan="5" class="text-center h4">To Do App</th>
+        </tr>
+        <tr>
+          <th scope="col">ID</th>
+          <th scope="col">Billing Name</th>
+          <th scope="col">Billing Notes</th>
+          <th scope="col">Done</th>
+          <th scope="col">Actions</th>
+        </tr>
+      </thead>
+      {% for index, billing in billings.items %}
+      <tr scope="row">
+        <td>{{ index }}</td>
+        <td>{{ billing.name }}</td>
+        <td>{{ billing.notes }}</td>
+        <td>{{ billing.done }}</td>
+        <td>
+          <a
+            href="{% url 'billing:details' index%}"
+            class="btn btn-primary btn-sm mx-1 my-1"
+          >
+            Details
+          </a>
+          <a
+            href="{% url 'billing:edit' index%}"
+            class="btn btn-warning btn-sm mx-1 my-1"
+          >
+            Edit
+          </a>
+          <a
+            href="{% url 'billing:done' index%}"
+            class="btn btn-secondary btn-sm mx-1 my-1"
+          >
+            Toggle Done
+          </a>
+          <a
+            href="{% url 'billing:delete' index%}"
+            class="btn btn-danger btn-sm mx-1 my-1"
+          >
+            Delete
+          </a>
+        </td>
+      </tr>
+      {% endfor %}
+    </table>
+  </div>
+  <div class="d-flex justify-content-end">
+    <a class="btn btn-success btn-sm mx-1 my-1" href="{% url 'billing:add' %}"
+      >Add New Billing</a
+    >
+  </div>
+</div>
+{% endblock %}

@@ -1,0 +1,28 @@
+{% extends 'general_templates/base.html' %}
+{% load crispy_forms_tags %}
+{% block body_content %}
+<div class="delete_div d-flex flex-column">
+  <div style="color: rgb(225, 225, 225)" class="text-center h3">
+    Movie Details.
+  </div>
+  <div class="w-50 m-auto">
+    <div style="color: rgb(225, 225, 225)" class="h5">
+      Movie ID : {{ movie_index }}
+    </div>
+    <div style="color: rgb(225, 225, 225)" class="h5">
+      Movie Name : {{ movie.name }}
+    </div>
+    <div style="color: rgb(225, 225, 225)" class="h5">
+      Movie Production Year : {{ movie.production_year }}
+    </div>
+    <div style="color: rgb(225, 225, 225)" class="h5">
+      Movie Actors :
+      {% for actor in movie.actors.all %}
+        {{ actor.name }} . 
+      {% endfor %}
+    </div>
+    <a class="btn btn-success my-2" href="{% url 'movie:list' %}">Back Home</a>
+  </div>
+</div>
+
+{% endblock %}

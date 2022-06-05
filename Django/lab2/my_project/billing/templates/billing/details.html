@@ -1,0 +1,23 @@
+{% extends 'general_templates/base.html' %} {% block body_content %}
+<div class="delete_div d-flex flex-column">
+  <div style="color: rgb(225, 225, 225)" class="text-center h3">
+    Billing Details.
+  </div>
+  <div class="w-50 m-auto">
+    <div style="color: rgb(225, 225, 225)" class="h5">
+      Billing ID : {{ billing_index }}
+    </div>
+    <div style="color: rgb(225, 225, 225)" class="h5">
+      Billing Name : {{ billing.name }}
+    </div>
+    <div style="color: rgb(225, 225, 225)" class="h5">
+      Billing Notes : {{ billing.notes }}
+    </div>
+    <div style="color: rgb(225, 225, 225)" class="h5">
+      Billing Done : {{ billing.done }}
+    </div>
+    <a class="btn btn-success my-2" href="{% url 'billing:list' %}">Back Home</a>
+  </div>
+</div>
+
+{% endblock %}
