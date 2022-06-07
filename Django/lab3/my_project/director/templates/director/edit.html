@@ -1,0 +1,19 @@
+{% extends 'general_templates/base.html' %}
+{% load crispy_forms_tags %}
+{% block body_content %}
+<form
+  class="d-flex flex-column mx-auto w-50"
+  action="{% url 'director:edit' director.id%}"
+  method="POST"
+  enctype="multipart/form-data"
+>
+  <h2 class="text-center my-3">Edit Director</h2>
+  {% csrf_token %}
+  {{form|crispy}}
+  <div class="d-flex justify-content-between">
+    <a class="btn btn-danger mt-4" href="{% url 'director:list' %}">Back Home</a>
+    <button class="btn btn-success mt-4">Confirm Edit</button>
+  </div>
+</form>
+
+{% endblock %}

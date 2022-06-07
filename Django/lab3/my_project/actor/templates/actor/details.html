@@ -1,0 +1,22 @@
+{% extends 'general_templates/base.html' %} {% block body_content %}
+<div class="delete_div d-flex flex-column">
+  <div style="color: rgb(225, 225, 225)" class="text-center h3">
+    Actor Details.
+  </div>
+  <div class="w-50 m-auto">
+    <img src="{{request.scheme}}://{{request.get_host}}{{actor.profile_picture.url}}"/>
+    <br/>
+    <div style="color: rgb(225, 225, 225)" class="h5">
+      Actor ID : {{ actor_index }}
+    </div>
+    <div style="color: rgb(225, 225, 225)" class="h5">
+      Actor Name : {{ actor.name }}
+    </div>
+    <div style="color: rgb(225, 225, 225)" class="h5">
+      Actor Gender : {{ actor.gender }}
+    </div>
+    <a class="btn btn-success my-2" href="{% url 'actor:list' %}">Back Home</a>
+  </div>
+</div>
+
+{% endblock %}
