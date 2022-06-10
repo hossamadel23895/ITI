@@ -1,0 +1,23 @@
+{% extends 'general_templates/base.html' %} {% block body_content %}
+<div class="delete_div d-flex flex-column">
+  <div style="color: rgb(225, 225, 225)" class="text-center h3">
+    Task Details.
+  </div>
+  <div class="w-50 m-auto">
+    <div style="color: rgb(225, 225, 225)" class="h5">
+      Task ID : {{ todo_index }}
+    </div>
+    <div style="color: rgb(225, 225, 225)" class="h5">
+      Task Name : {{ todo.name }}
+    </div>
+    <div style="color: rgb(225, 225, 225)" class="h5">
+      Task Notes : {{ todo.notes }}
+    </div>
+    <div style="color: rgb(225, 225, 225)" class="h5">
+      Task Done : {{ todo.done }}
+    </div>
+    <a class="btn btn-success my-2" href="{% url 'todo:list' %}">Back Home</a>
+  </div>
+</div>
+
+{% endblock %}
