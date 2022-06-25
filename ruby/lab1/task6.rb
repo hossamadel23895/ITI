@@ -1,4 +1,6 @@
 def rotated_array(nums)
-    return rotated = [nums[1], nums[2], nums[0]]
-end
-p rotated_array([1,2,5])
+    print(nums.rotate(-1))
+    puts
+  end
+  
+  rotated_array([2, 5, 1])
