@@ -1,0 +1,53 @@
+
+<%= form_with model: book do |form| %>
+
+
+  <div class="col-8 offset-1 input-group input-group-sm mb-3">
+    <%= render "partials/form_errors", form:form %>
+  </div>
+  <div class="col-8 offset-1 input-group input-group-sm mb-3">
+    <div class="input-group-prepend">
+            <span class="input-group-text" id="inputGroup-sizing-sm">
+             <%= form.label :name %>
+            </span>
+    </div>
+    <div class="col-8">
+      <%= form.text_field :name, class: "form-control " %>
+    </div>
+  </div>
+
+  <div class="col-8 offset-1 input-group input-group-sm mb-3">
+    <div class="input-group-prepend">
+            <span class="input-group-text" id="inputGroup-sizing-sm">
+             <%= form.label :description %>
+            </span>
+    </div>
+    <div class="col-8">
+      <%= form.text_field :description, class: "form-control " %>
+    </div>
+  </div>
+
+  <div class="col-5 offset-1 input-group input-group-sm mb-3">
+    <div class="input-group-prepend">
+            <span class="input-group-text" id="inputGroup-sizing-sm">
+             <%= form.label :price %>
+            </span>
+    </div>
+    <div class="col-8">
+      <%= form.number_field :price, class: "form-control " %>
+    </div>
+  </div>
+
+  <div class="col-5 offset-1 input-group input-group-sm mb-3">
+    <div class="col-8">
+      <%= form.file_field :image, class: "form-control " %>
+    </div>
+  </div>
+
+  <div>
+    <%= form.submit 'Add the book', :class => "btn btn-success col-4 offset-2 " %>
+    <%#= form.submit %>
+  </div>
+
+
+<% end %>

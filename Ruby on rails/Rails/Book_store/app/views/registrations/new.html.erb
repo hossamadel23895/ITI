@@ -1,0 +1,49 @@
+<div class="bg-light mt-4 p-2 col-8 offset-2">
+  <h1>New Account</h1>
+
+  <%= form_with model: @user ,url: sign_up_path do |form| %>
+
+
+    <div class="col-8 offset-1 input-group input-group-sm mb-3">
+      <%= render "partials/form_errors", form:form %>
+    </div>
+    <div class="col-8 offset-1 input-group input-group-sm mb-3">
+      <div class="input-group-prepend">
+            <span class="input-group-text" id="inputGroup-sizing-sm">
+             <%= form.label :email %>
+            </span>
+      </div>
+      <div class="col-8">
+        <%= form.text_field :email, class: "form-control ",placeholder:"email" %>
+      </div>
+    </div>
+
+    <div class="col-5 offset-1 input-group input-group-sm mb-3">
+      <div class="input-group-prepend">
+            <span class="input-group-text" id="inputGroup-sizing-sm">
+             <%= form.label :password %>
+            </span>
+      </div>
+      <div class="col-s">
+        <%= form.password_field :password, class: "form-control ",placeholder:"password " %>
+      </div>
+    </div>
+
+    <div class="col-5 offset-1 input-group input-group-sm mb-3">
+      <div class="input-group-prepend">
+            <span class="input-group-text" id="inputGroup-sizing-sm">
+             <%= form.label :password_confirmation %>
+            </span>
+      </div>
+      <div class="col-5">
+        <%= form.password_field :password_confirmation, class: "form-control " ,placeholder:"password confirmation"%>
+      </div>
+    </div>
+    <div>
+      <%= form.submit class: "btn btn-primary col-3 offset-4 " %>
+
+    </div>
+
+
+  <% end %>
+</div>
